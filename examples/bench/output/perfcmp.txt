@@ -1,0 +1,20 @@
+symbol (top 14 on HW)                        HW%  model%    diff
+interp                                     28.34   28.60   +0.26
+qsort64                                    16.23   13.85   -2.38
+run_chase                                   6.89    1.69   -5.20
+chase                                       4.46    3.49   -0.97
+strcmp                                      4.46    8.57   +4.11
+_IO_default_xsputn                          4.00    4.38   +0.38
+hfind                                       3.64    8.71   +5.07
+matmul                                      3.28    2.33   -0.95
+hstr                                        2.62    3.14   +0.52
+strchrnul                                   1.90    2.03   +0.13
+run_hashmap                                 1.74    0.79   -0.95
+__snprintf                                  0.85    0.00   -0.85
+0x00000000001119e0                          0.79    0.00   -0.79
+_IO_setb                                    0.69    0.61   -0.08
+sum |diff| over the HW top 14: 22.6 points
+
+model top 10 not in the HW list:
+psiginfo                                       -   13.10  lib
+cuserid                                        -    3.06  lib

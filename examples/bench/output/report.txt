@@ -1,0 +1,32 @@
+window: 93000000 wide instructions counted, 178401870 model cycles, IPC 0.521
+layer        cyc% issue% stall%  stall causes (% of layer cycles)
+main         64.5   44.6   55.4  nop:35 DRAM:10 L3:4 ctprep:3
+lib          35.5   65.8   34.2  DRAM:17 nop:11 ctprep:4 dep:2
+other         0.0    2.2   97.8  itarget:86 itlb:12
+
+-- main: top 8
+   #   cyc%     cycles     insns   IPC issue% stall%  top stalls (% of row)      why      symbol
+   1  28.60   51016090  25508039  0.50   50.0   50.0  nop:50                     nops     interp
+   2  13.85   24715329  13466399  0.54   54.5   45.5  nop:40 dep:3 DRAM:2        nops     qsort64
+   3   8.71   15540489   2512066  0.16   16.2   83.8  DRAM:71 nop:6 ctprep:6     memory   hfind
+   4   3.49    6220534    418695  0.07    6.7   93.3  L3:65 dtlb:28 nop:0        cache    chase
+   5   3.14    5596451   3769421  0.67   67.4   32.6  nop:33 itarget:0           nops     hstr
+   6   2.33    4152800   2999968  0.72   72.2   27.8  nop:28 ctprep:0 dtlb:0     nops     matmul
+   7   1.87    3331847    768705  0.23   23.1   76.9  ctprep:62 nop:15 itarget:0 ct-prep  _init
+   8   1.69    3016010   1081305  0.36   35.9   64.1  dep:35 L2:14 L3:10         latency  run_chase
+
+-- lib: top 8
+   #   cyc%     cycles     insns   IPC issue% stall%  top stalls (% of row)      why      symbol
+   1  13.10   23366604  19008694  0.81   81.3   18.7  nop:10 ctprep:6 dep:3      width    libc:psiginfo@@GLIBC_2.10
+   2   8.57   15297432   4137538  0.27   27.0   73.0  DRAM:69 L2:4 L3:0          memory   libc:strcmp@@GLIBC_2.2
+   3   4.38    7806519   6500159  0.83   83.3   16.7  ctprep:11 nop:6 itarget:0  width    libc:_IO_default_xsputn@@GLIBC_2.2
+   4   3.06    5452382   3552129  0.65   65.1   34.9  nop:30 dep:5 itarget:0     nops     libc:cuserid@@GLIBC_2.2
+   5   2.03    3628162   2902027  0.80   80.0   20.0  nop:20 DRAM:0 itarget:0    nops     libc:strchrnul@@GLIBC_2.2
+   6   1.10    1959431   1450973  0.74   74.1   25.9  ctprep:15 nop:11 itarget:0 width    libc:_IO_enable_locks@@GLIBC_PRIVATE
+   7   1.06    1886516   1233322  0.65   65.4   34.6  nop:35 itarget:0 itlb:0    nops     libc:vscanf@@GLIBC_2.2
+   8   0.73    1306140   1160820  0.89   88.9   11.1  nop:11 itarget:0 itlb:0    width    libc:_IO_list_resetlock@@GLIBC_2.2
+
+-- other: top 2
+   #   cyc%     cycles     insns   IPC issue% stall%  top stalls (% of row)      why      symbol
+   1   0.00        236         5  0.02    2.1   97.9  itarget:86 itlb:11         target   code@e20000000000
+   2   0.00        222         5  0.02    2.3   97.7  itarget:86 itlb:12         target   code@e20000010000

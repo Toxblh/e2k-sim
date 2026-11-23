@@ -1,0 +1,17 @@
+== bench: 0.602 G cycles (model), instruction supply 0.019 G = 3 %
+  layer        G cyc  supply | target   itlb    seq ctprep    ibr | hot90 KB    pages
+  main         0.388   0.010 |  0.000  0.000  0.000  0.010  0.000 |        4        2
+  lib          0.214   0.008 |  0.000  0.000  0.000  0.008  0.000 |       12       13
+  other        0.000   0.000 |  0.000  0.000  0.000  0.000  0.000 |        0        2
+  top symbols by supply cost (G):  itarget   itlb icache ctprep ibranch
+  main       _init                                         0.000  0.000  0.000  0.007  0.000
+  lib        libc:psiginfo@@GLIBC_2.10                     0.000  0.000  0.000  0.004  0.000
+  main       hfind                                         0.000  0.000  0.000  0.003  0.000
+  lib        libc:_IO_default_xsputn@@GLIBC_2.2            0.000  0.000  0.000  0.003  0.000
+  lib        libc:_IO_enable_locks@@GLIBC_PRIVATE          0.000  0.000  0.000  0.001  0.000
+  main       qsort64                                       0.000  0.000  0.000  0.000  0.000
+  lib        libc:__default_morecore@GLIBC_2.2             0.000  0.000  0.000  0.000  0.000
+  lib        libc:calloc@@GLIBC_2.2                        0.000  0.000  0.000  0.000  0.000
+  main       matmul                                        0.000  0.000  0.000  0.000  0.000
+  lib        libc:__nss_database_lookup@GLIBC_2.2          0.000  0.000  0.000  0.000  0.000
+

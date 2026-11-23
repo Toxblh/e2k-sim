@@ -1,0 +1,2 @@
+run               win     CPI  HW CPI CPI err | G cyc mod  G cyc HW     err | qemu Gins   HW Gins    diff
+bench              62   1.918   1.940   -1.1% |    0.6020    0.6087   -1.1% |    0.3138    0.3138   +0.0%

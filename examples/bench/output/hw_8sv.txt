@@ -1,0 +1,3 @@
+bench cycles=608795627 instructions=313826859 scope=all
+bench cycles=608836946 instructions=313826857 scope=all
+bench cycles=608486815 instructions=313826857 scope=all

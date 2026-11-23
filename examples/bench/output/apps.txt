@@ -1,0 +1,24 @@
+bench: 0.314 G wide insns, 0.602 G cycles (model), IPC 0.521, windows cover 29.63 % of the run
+
+WHERE: layers (G cycles, % of run, issue share, top stall causes as % of the layer)
+  main          0.388  64.5%  issue  45%  nop:35 DRAM:10 L3:4           
+  lib           0.214  35.5%  issue  66%  DRAM:17 nop:11 ctprep:4       
+  other         0.000   0.0%  issue   2%  itarget:86 itlb:12            
+
+WHAT: cycles by cause (% of run)
+  issue 52.1  nop 26.4  dep 1.7  L2 0.8  L3 2.5  DRAM 12.4  dtlb 1.0  ctprep 3.1
+
+WHY: top 12 symbols (G cycles, % of run, stall causes as % of the symbol, dominant reason)
+  layer         G cyc     %  stalls                     why      symbol
+  main         0.1722  28.6  nop:50                     nops     interp
+  main         0.0834  13.9  nop:40 dep:3 DRAM:2        nops     qsort64
+  lib          0.0789  13.1  nop:10 ctprep:6 dep:3      width    libc:psiginfo@@GLIBC_2.10
+  main         0.0524   8.7  DRAM:71 nop:6 ctprep:6     memory   hfind
+  lib          0.0516   8.6  DRAM:69 L2:4 L3:0          memory   libc:strcmp@@GLIBC_2.2
+  lib          0.0263   4.4  ctprep:11 nop:6 itarget:0  width    libc:_IO_default_xsputn@@GLIBC_2.2
+  main         0.0210   3.5  L3:65 dtlb:28 nop:0        cache    chase
+  main         0.0189   3.1  nop:33 itarget:0           nops     hstr
+  lib          0.0184   3.1  nop:30 dep:5 itarget:0     nops     libc:cuserid@@GLIBC_2.2
+  main         0.0140   2.3  nop:28 ctprep:0 dtlb:0     nops     matmul
+  lib          0.0122   2.0  nop:20 DRAM:0 itarget:0    nops     libc:strchrnul@@GLIBC_2.2
+  main         0.0112   1.9  ctprep:62 nop:15 itarget:0 ct-prep  _init
