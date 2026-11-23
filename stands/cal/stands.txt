@@ -1,0 +1,16 @@
+chase16k ./stand chase 16384 20000000
+chase256k ./stand chase 262144 20000000
+chase2m ./stand chase 2097152 10000000
+chase64m ./stand chase 67108864 2000000
+st512k ./stand st 524288 20000000
+seq4m ./stand seq 4194304 5000000
+code8 ./code 8 1646090
+code96 ./code 96 135424
+code512 ./code 512 28066
+code2048 ./code 2048 7455
+call8s ./stand call 8 0 2500000
+call16b ./stand call 16 1 1250000
+call128b ./stand call 128 1 156250
+call128s ./stand call 128 0 156250
+tlb2048 env NOFILL=1 ./stand tlb 2048 4096 10000000 0
+tlb300h env NOFILL=1 ./stand tlb 300 2097152 10000000 1

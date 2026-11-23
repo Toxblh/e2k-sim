@@ -1,0 +1,8 @@
+itlb_P16 P=16 it=1123595 cycles:u=119906242 instructions:u=100628578 ib_disp_itlb_miss:u=2285644 ib_ahead_itlb_miss:u=39 
+itlb_P24 P=24 it=775193 cycles:u=119313611 instructions:u=100463269 ib_disp_itlb_miss:u=1579090 ib_ahead_itlb_miss:u=188 
+itlb_P28 P=28 it=671140 cycles:u=120447941 instructions:u=99645754 ib_disp_itlb_miss:u=1355786 ib_ahead_itlb_miss:u=43 
+itlb_P32 P=32 it=591715 cycles:u=121937293 instructions:u=99398597 ib_disp_itlb_miss:u=1175953 ib_ahead_itlb_miss:u=41 
+itlb_P40 P=40 it=478468 cycles:u=118844870 instructions:u=99225493 ib_disp_itlb_miss:u=975722 ib_ahead_itlb_miss:u=70 
+itlb_P48 P=48 it=401606 cycles:u=122170912 instructions:u=98883816 ib_disp_itlb_miss:u=796301 ib_ahead_itlb_miss:u=45 
+itlb_P64 P=64 it=303951 cycles:u=118408443 instructions:u=98762849 ib_disp_itlb_miss:u=621185 ib_ahead_itlb_miss:u=66 
+itlb_P96 P=96 it=204498 cycles:u=122571539 instructions:u=97838415 ib_disp_itlb_miss:u=807169 ib_ahead_itlb_miss:u=80 

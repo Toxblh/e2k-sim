@@ -1,0 +1,58 @@
+dist_D0 asm disp 8 4 0 64 0 4 2040816
+dist_D64 asm disp 8 4 64 64 0 4 2040816
+dist_D256 asm disp 8 4 256 64 0 4 2040816
+dist_D1024 asm disp 8 4 1024 64 0 4 2040816
+dist_D4096 asm disp 8 4 4096 64 0 4 2040816
+dist_D16384 asm disp 8 4 16384 64 0 4 2040816
+dist_D65536 asm disp 8 4 65536 64 0 4 2040816
+prep_d1_far asm disp 8 4 4096 64 0 1 2040816
+prep_d1_near asm disp 8 4 0 64 0 1 2040816
+prep_d2_far asm disp 8 4 4096 64 0 2 2040816
+prep_d2_near asm disp 8 4 0 64 0 2 2040816
+prep_d3_far asm disp 8 4 4096 64 0 3 2040816
+prep_d3_near asm disp 8 4 0 64 0 3 2040816
+prep_d4_far asm disp 8 4 4096 64 0 4 2040816
+prep_d4_near asm disp 8 4 0 64 0 4 2040816
+prep_d5_far asm disp 8 4 4096 64 0 5 1754385
+prep_d5_near asm disp 8 4 0 64 0 5 1754385
+prep_d6_far asm disp 8 4 4096 64 0 6 1538461
+prep_d6_near asm disp 8 4 0 64 0 6 1538461
+prep_d8_far asm disp 8 4 4096 64 0 8 1234567
+prep_d8_near asm disp 8 4 0 64 0 8 1234567
+ibr_D0 asm ibranch 8 4 0 64 0 0 2040816
+ibr_D256 asm ibranch 8 4 256 64 0 0 2040816
+ibr_D4096 asm ibranch 8 4 4096 64 0 0 2040816
+ibr_D65536 asm ibranch 8 4 65536 64 0 0 2040816
+align_off0 asm disp 8 4 4096 256 0 4 2040816
+align_off32 asm disp 8 4 4096 256 32 4 2040816
+align_off64 asm disp 8 4 4096 256 64 4 2040816
+align_off128 asm disp 8 4 4096 256 128 4 2040816
+align_off192 asm disp 8 4 4096 256 192 4 2040816
+align_off224 asm disp 8 4 4096 256 224 4 2040816
+align_off248 asm disp 8 4 4096 256 248 4 2040816
+foot_K8 asm disp 8 4 0 8 0 4 2040816
+foot_K64 asm disp 64 4 0 8 0 4 303951
+foot_K256 asm disp 256 4 0 8 0 4 77579
+foot_K1024 asm disp 1024 4 0 8 0 4 19496
+foot_K4096 asm disp 4096 4 0 8 0 4 4880
+foot_K16384 asm disp 16384 4 0 8 0 4 1220
+foot1_K8 asm disp 8 1 0 8 0 4 2040816
+foot1_K64 asm disp 64 1 0 8 0 4 303951
+foot1_K256 asm disp 256 1 0 8 0 4 77579
+foot1_K1024 asm disp 1024 1 0 8 0 4 19496
+foot1_K4096 asm disp 4096 1 0 8 0 4 4880
+foot1_K16384 asm disp 16384 1 0 8 0 4 1220
+ibrfoot_K8 asm ibranch 8 1 0 8 0 0 4000000
+ibrfoot_K64 asm ibranch 64 1 0 8 0 0 729927
+ibrfoot_K512 asm ibranch 512 1 0 8 0 0 96805
+ibrfoot_K4096 asm ibranch 4096 1 0 8 0 0 12193
+ibrfoot_K16384 asm ibranch 16384 1 0 8 0 0 3050
+call_K8 c 8 2083333
+call_K64 c 64 260416
+call_K512 c 512 32552
+call_K4096 c 4096 4069
+call_K16384 c 16384 1017
+far16_D65536 asm disp 16 4 65536 64 0 4 600000
+far64_D65536 asm disp 64 4 65536 64 0 4 150000
+far256_D16384 asm disp 256 4 16384 64 0 4 40000
+farseq_D0K4096 asm disp 4096 4 0 8 0 4 4000

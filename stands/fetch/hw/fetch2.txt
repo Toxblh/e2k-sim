@@ -1,0 +1,8 @@
+far16_D65536 G1 it=600000 cycles:u=159067373 instructions:u=54006227 ib_disp_miss:u=17058292 ib_ahead_miss:u=4872954 
+far16_D65536 G2 it=600000 cycles:u=159212219 ib_disp_query:u=26803030 ib_ahead_query:u=4867633 bub_b:u=608157 
+far64_D65536 G1 it=150000 cycles:u=402328248 instructions:u=49430627 ib_disp_miss:u=20799163 ib_ahead_miss:u=6556918 
+far64_D65536 G2 it=150000 cycles:u=405691054 ib_disp_query:u=22718992 ib_ahead_query:u=6910212 bub_b:u=151581 
+far256_D16384 G1 it=40000 cycles:u=280442746 instructions:u=50610483 ib_disp_miss:u=21049387 ib_ahead_miss:u=7135916 
+far256_D16384 G2 it=40000 cycles:u=280563124 ib_disp_query:u=23699280 ib_ahead_query:u=7064008 bub_b:u=40936 
+farseq_D0K4096 G1 it=4000 cycles:u=100131002 instructions:u=80818109 ib_disp_miss:u=2519370 ib_ahead_miss:u=1667491 
+farseq_D0K4096 G2 it=4000 cycles:u=99758973 ib_disp_query:u=47318110 ib_ahead_query:u=1687122 bub_b:u=6835 

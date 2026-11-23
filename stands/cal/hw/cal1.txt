@@ -1,0 +1,342 @@
+chase_16384_20000000 G0 cycles:u=60399166 instructions:u=60114399 l1_query:u=20088387 l1_ld_hit:u=20066751 
+chase_16384_20000000 G1 l1_st_query:u=0 l1_st_hit:u=15534 l2_query:u=19470 l2_hit:u=4271 
+chase_16384_20000000 G2 dtlb_query:u=19563669 dtlb_hit:u=20010876 stall_dtlb_miss:u=1863 cycles:u=61696196 
+chase_16384_0 G0 cycles:u=387124 instructions:u=114281 l1_query:u=88373 l1_ld_hit:u=67123 
+chase_16384_0 G1 l1_st_query:u=3194 l1_st_hit:u=8069 l2_query:u=<not counted> l2_hit:u=<not counted> 
+chase_16384_0 G2 dtlb_query:u=84147 dtlb_hit:u=88287 stall_dtlb_miss:u=3705 cycles:u=424098 
+seq_16384_20000000 G0 cycles:u=81204603 instructions:u=60579916 l1_query:u=20085989 l1_ld_hit:u=20064443 
+seq_16384_20000000 G1 l1_st_query:u=0 l1_st_hit:u=15059 l2_query:u=1264 l2_hit:u=6156 
+seq_16384_20000000 G2 dtlb_query:u=20055351 dtlb_hit:u=19944831 stall_dtlb_miss:u=3450 cycles:u=81287886 
+seq_16384_0 G0 cycles:u=402875 instructions:u=110941 l1_query:u=85898 l1_ld_hit:u=65857 
+seq_16384_0 G1 l1_st_query:u=14431 l1_st_hit:u=8615 l2_query:u=<not counted> l2_hit:u=<not counted> 
+seq_16384_0 G2 dtlb_query:u=86483 dtlb_hit:u=85799 stall_dtlb_miss:u=<not counted> cycles:u=<not counted> 
+st_16384_20000000 G0 cycles:u=31141944 instructions:u=30697415 l1_query:u=20086186 l1_ld_hit:u=66001 
+st_16384_20000000 G1 l1_st_query:u=16286951 l1_st_hit:u=15340 l2_query:u=21296080 l2_hit:u=20804607 
+st_16384_20000000 G2 dtlb_query:u=20273095 dtlb_hit:u=19600943 stall_dtlb_miss:u=3550 cycles:u=31662069 
+st_16384_0 G0 cycles:u=363210 instructions:u=111062 l1_query:u=85976 l1_ld_hit:u=65993 
+st_16384_0 G1 l1_st_query:u=0 l1_st_hit:u=8627 l2_query:u=<not counted> l2_hit:u=<not counted> 
+st_16384_0 G2 dtlb_query:u=102606 dtlb_hit:u=85974 stall_dtlb_miss:u=3314 cycles:u=319968 
+chase_65536_20000000 G0 cycles:u=60519639 instructions:u=60123981 l1_query:u=20097914 l1_ld_hit:u=20062179 
+chase_65536_20000000 G1 l1_st_query:u=73805 l1_st_hit:u=16958 l2_query:u=34454 l2_hit:u=15381 
+chase_65536_20000000 G2 dtlb_query:u=20127930 dtlb_hit:u=19979906 stall_dtlb_miss:u=4250 cycles:u=61080658 
+chase_65536_0 G0 cycles:u=391716 instructions:u=123863 l1_query:u=97924 l1_ld_hit:u=69916 
+chase_65536_0 G1 l1_st_query:u=20270 l1_st_hit:u=9525 l2_query:u=<not counted> l2_hit:u=<not counted> 
+chase_65536_0 G2 dtlb_query:u=25724 dtlb_hit:u=97735 stall_dtlb_miss:u=3376 cycles:u=463284 
+seq_65536_20000000 G0 cycles:u=80727415 instructions:u=60229888 l1_query:u=20089102 l1_ld_hit:u=20049542 
+seq_65536_20000000 G1 l1_st_query:u=4300 l1_st_hit:u=14863 l2_query:u=29442 l2_hit:u=30982 
+seq_65536_20000000 G2 dtlb_query:u=19657638 dtlb_hit:u=19958418 stall_dtlb_miss:u=487 cycles:u=81938252 
+seq_65536_0 G0 cycles:u=379171 instructions:u=112480 l1_query:u=89006 l1_ld_hit:u=65880 
+seq_65536_0 G1 l1_st_query:u=2169 l1_st_hit:u=8662 l2_query:u=<not counted> l2_hit:u=<not counted> 
+seq_65536_0 G2 dtlb_query:u=89619 dtlb_hit:u=88886 stall_dtlb_miss:u=<not counted> cycles:u=<not counted> 
+st_65536_20000000 G0 cycles:u=30602134 instructions:u=30260262 l1_query:u=20089815 l1_ld_hit:u=65922 
+st_65536_20000000 G1 l1_st_query:u=17172409 l1_st_hit:u=16690 l2_query:u=21353164 l2_hit:u=21353135 
+st_65536_20000000 G2 dtlb_query:u=18548761 dtlb_hit:u=19535351 stall_dtlb_miss:u=67 cycles:u=31807306 
+st_65536_0 G0 cycles:u=381236 instructions:u=112600 l1_query:u=89083 l1_ld_hit:u=65926 
+st_65536_0 G1 l1_st_query:u=16146 l1_st_hit:u=8628 l2_query:u=<not counted> l2_hit:u=<not counted> 
+st_65536_0 G2 dtlb_query:u=151 dtlb_hit:u=88951 stall_dtlb_miss:u=2925 cycles:u=444083 
+chase_524288_20000000 G0 cycles:u=468212830 instructions:u=60213597 l1_query:u=20186232 l1_ld_hit:u=96582 
+chase_524288_20000000 G1 l1_st_query:u=2607 l1_st_hit:u=47628 l2_query:u=19996471 l2_hit:u=7846578 
+chase_524288_20000000 G2 dtlb_query:u=20167634 dtlb_hit:u=20212097 stall_dtlb_miss:u=5114 cycles:u=477332385 
+chase_524288_0 G0 cycles:u=519229 instructions:u=213479 l1_query:u=186189 l1_ld_hit:u=96329 
+chase_524288_0 G1 l1_st_query:u=54820 l1_st_hit:u=23844 l2_query:u=<not counted> l2_hit:u=<not counted> 
+chase_524288_0 G2 dtlb_query:u=142997 dtlb_hit:u=185583 stall_dtlb_miss:u=7999 cycles:u=768008 
+seq_524288_20000000 G0 cycles:u=363772816 instructions:u=60141700 l1_query:u=20118186 l1_ld_hit:u=65760 
+seq_524288_20000000 G1 l1_st_query:u=29853 l1_st_hit:u=14644 l2_query:u=20160075 l2_hit:u=14009345 
+seq_524288_20000000 G2 dtlb_query:u=20155284 dtlb_hit:u=20109038 stall_dtlb_miss:u=3465 cycles:u=360784026 
+seq_524288_0 G0 cycles:u=408112 instructions:u=126828 l1_query:u=118019 l1_ld_hit:u=65840 
+seq_524288_0 G1 l1_st_query:u=2889 l1_st_hit:u=7552 l2_query:u=<not counted> l2_hit:u=<not counted> 
+seq_524288_0 G2 dtlb_query:u=88519 dtlb_hit:u=117566 stall_dtlb_miss:u=3609 cycles:u=335360 
+st_524288_20000000 G0 cycles:u=30440378 instructions:u=30152583 l1_query:u=20122928 l1_ld_hit:u=65890 
+st_524288_20000000 G1 l1_st_query:u=14628400 l1_st_hit:u=14838 l2_query:u=22271003 l2_hit:u=16208455 
+st_524288_20000000 G2 dtlb_query:u=18189910 dtlb_hit:u=19405631 stall_dtlb_miss:u=145 cycles:u=32357550 
+st_524288_0 G0 cycles:u=401215 instructions:u=126974 l1_query:u=118097 l1_ld_hit:u=65889 
+st_524288_0 G1 l1_st_query:u=2810 l1_st_hit:u=8615 l2_query:u=<not counted> l2_hit:u=<not counted> 
+st_524288_0 G2 dtlb_query:u=118845 dtlb_hit:u=117650 stall_dtlb_miss:u=<not counted> cycles:u=<not counted> 
+chase_4194304_5000000 G0 cycles:u=196338738 instructions:u=15930528 l1_query:u=7200089 l1_ld_hit:u=245877 
+chase_4194304_5000000 G1 l1_st_query:u=160657 l1_st_hit:u=14642 l2_query:u=8455127 l2_hit:u=2025445 
+chase_4194304_5000000 G2 dtlb_query:u=7054206 dtlb_hit:u=5616858 stall_dtlb_miss:u=6328332 cycles:u=190234862 
+chase_4194304_0 G0 cycles:u=2537824 instructions:u=930424 l1_query:u=909246 l1_ld_hit:u=245813 
+chase_4194304_0 G1 l1_st_query:u=121642 l1_st_hit:u=13788 l2_query:u=1295126 l2_hit:u=773923 
+chase_4194304_0 G2 dtlb_query:u=1922617 dtlb_hit:u=1104392 stall_dtlb_miss:u=15450 cycles:u=2621075 
+seq_4194304_5000000 G0 cycles:u=126473342 instructions:u=15242176 l1_query:u=5371679 l1_ld_hit:u=65863 
+seq_4194304_5000000 G1 l1_st_query:u=28417 l1_st_hit:u=14451 l2_query:u=5285244 l2_hit:u=2861567 
+seq_4194304_5000000 G2 dtlb_query:u=5240195 dtlb_hit:u=5323551 stall_dtlb_miss:u=157084 cycles:u=126274124 
+seq_4194304_0 G0 cycles:u=687425 instructions:u=241542 l1_query:u=349689 l1_ld_hit:u=65634 
+seq_4194304_0 G1 l1_st_query:u=228760 l1_st_hit:u=7669 l2_query:u=278179 l2_hit:u=100776 
+seq_4194304_0 G2 dtlb_query:u=112854 dtlb_hit:u=371934 stall_dtlb_miss:u=12488 cycles:u=624419 
+st_4194304_5000000 G0 cycles:u=9183052 instructions:u=7909969 l1_query:u=5481975 l1_ld_hit:u=65681 
+st_4194304_5000000 G1 l1_st_query:u=4442867 l1_st_hit:u=14781 l2_query:u=8476520 l2_hit:u=4204575 
+st_4194304_5000000 G2 dtlb_query:u=6245647 dtlb_hit:u=4363470 stall_dtlb_miss:u=153732 cycles:u=11151899 
+st_4194304_0 G0 cycles:u=639892 instructions:u=241664 l1_query:u=349770 l1_ld_hit:u=65938 
+st_4194304_0 G1 l1_st_query:u=126679 l1_st_hit:u=10079 l2_query:u=752897 l2_hit:u=252923 
+st_4194304_0 G2 dtlb_query:u=392025 dtlb_hit:u=362283 stall_dtlb_miss:u=12635 cycles:u=351805 
+chase_67108864_2000000 G0 cycles:u=495928299 instructions:u=19218543 l1_query:u=17897401 l1_ld_hit:u=2721874 
+chase_67108864_2000000 G1 l1_st_query:u=7494357 l1_st_hit:u=2124211 l2_query:u=21805344 l2_hit:u=10519717 
+chase_67108864_2000000 G2 dtlb_query:u=17715904 dtlb_hit:u=14720489 stall_dtlb_miss:u=18670399 cycles:u=493268865 
+chase_67108864_0 G0 cycles:u=83471473 instructions:u=13218440 l1_query:u=13976801 l1_ld_hit:u=2721459 
+chase_67108864_0 G1 l1_st_query:u=7955803 l1_st_hit:u=2328816 l2_query:u=17376343 l2_hit:u=8794864 
+chase_67108864_0 G2 dtlb_query:u=14922864 dtlb_hit:u=13263408 stall_dtlb_miss:u=6264035 cycles:u=76452629 
+seq_67108864_2000000 G0 cycles:u=186633973 instructions:u=8207855 l1_query:u=6337116 l1_ld_hit:u=65931 
+seq_67108864_2000000 G1 l1_st_query:u=4272640 l1_st_hit:u=14476 l2_query:u=12218112 l2_hit:u=4483504 
+seq_67108864_2000000 G2 dtlb_query:u=6372385 dtlb_hit:u=6346277 stall_dtlb_miss:u=313990 cycles:u=187497190 
+seq_67108864_0 G0 cycles:u=4412417 instructions:u=2207636 l1_query:u=4321829 l1_ld_hit:u=65888 
+seq_67108864_0 G1 l1_st_query:u=3970494 l1_st_hit:u=14671 l2_query:u=10973301 l2_hit:u=3548583 
+seq_67108864_0 G2 dtlb_query:u=4376771 dtlb_hit:u=4301513 stall_dtlb_miss:u=153623 cycles:u=4145802 
+st_67108864_2000000 G0 cycles:u=11417158 instructions:u=5353507 l1_query:u=6435096 l1_ld_hit:u=65782 
+st_67108864_2000000 G1 l1_st_query:u=4349685 l1_st_hit:u=14655 l2_query:u=34336344 l2_hit:u=5492571 
+st_67108864_2000000 G2 dtlb_query:u=6700464 dtlb_hit:u=5921495 stall_dtlb_miss:u=375714 cycles:u=13515832 
+st_67108864_0 G0 cycles:u=4422629 instructions:u=2207778 l1_query:u=4321850 l1_ld_hit:u=65958 
+st_67108864_0 G1 l1_st_query:u=4247483 l1_st_hit:u=14378 l2_query:u=10727101 l2_hit:u=3602582 
+st_67108864_0 G2 dtlb_query:u=4490887 dtlb_hit:u=4325486 stall_dtlb_miss:u=150378 cycles:u=4104036 
+code_8_1646090 G0 cycles:u=479159727 instructions:u=455795106 ib_disp_miss:u=1300 ib_ahead_miss:u=1655989 
+code_8_1646090 G1 ib_disp_query:u=19771831 ib_ahead_query:u=36084876 ib_no_command:u=94477 bub_b:u=23141336 
+code_8_1646090 G2 l2_query:u=65612 l2_hit:u=44145 ib_disp_itlb_miss:u=1890 cycles:u=481122007 
+code_8_0 G0 cycles:u=363397 instructions:u=107706 ib_disp_miss:u=<not counted> ib_ahead_miss:u=<not counted> 
+code_8_0 G1 ib_disp_query:u=80419 ib_ahead_query:u=10609 ib_no_command:u=<not counted> bub_b:u=<not counted> 
+code_8_0 G2 l2_query:u=39628 l2_hit:u=22037 ib_disp_itlb_miss:u=1887 cycles:u=361659 
+code_32_391517 G0 cycles:u=514151608 instructions:u=461515733 ib_disp_miss:u=1404 ib_ahead_miss:u=404508 
+code_32_391517 G1 ib_disp_query:u=7180533 ib_ahead_query:u=37501644 ib_no_command:u=540831 bub_b:u=52613168 
+code_32_391517 G2 l2_query:u=90610 l2_hit:u=67894 ib_disp_itlb_miss:u=1892 cycles:u=516232993 
+code_32_0 G0 cycles:u=148790 instructions:u=107685 ib_disp_miss:u=5321 ib_ahead_miss:u=<not counted> 
+code_32_0 G1 ib_disp_query:u=30108 ib_ahead_query:u=10611 ib_no_command:u=81872 bub_b:u=<not counted> 
+code_32_0 G2 l2_query:u=39544 l2_hit:u=22147 ib_disp_itlb_miss:u=1889 cycles:u=369430 
+code_96_135424 G0 cycles:u=600947028 instructions:u=487329861 ib_disp_miss:u=1837 ib_ahead_miss:u=66207 
+code_96_135424 G1 ib_disp_query:u=2870586 ib_ahead_query:u=37568078 ib_no_command:u=272711 bub_b:u=113927005 
+code_96_135424 G2 l2_query:u=314244 l2_hit:u=283290 ib_disp_itlb_miss:u=1802 cycles:u=603126186 
+code_96_0 G0 cycles:u=484506 instructions:u=107685 ib_disp_miss:u=3374 ib_ahead_miss:u=<not counted> 
+code_96_0 G1 ib_disp_query:u=80446 ib_ahead_query:u=10610 ib_no_command:u=<not counted> bub_b:u=<not counted> 
+code_96_0 G2 l2_query:u=39725 l2_hit:u=22059 ib_disp_itlb_miss:u=1878 cycles:u=375789 
+code_192_70621 G0 cycles:u=668116748 instructions:u=500889031 ib_disp_miss:u=499851 ib_ahead_miss:u=8906356 
+code_192_70621 G1 ib_disp_query:u=1706880 ib_ahead_query:u=37600250 ib_no_command:u=4041502 bub_b:u=162114775 
+code_192_70621 G2 l2_query:u=74502555 l2_hit:u=74408549 ib_disp_itlb_miss:u=1886 cycles:u=666210427 
+code_192_0 G0 cycles:u=382945 instructions:u=107701 ib_disp_miss:u=<not counted> ib_ahead_miss:u=<not counted> 
+code_192_0 G1 ib_disp_query:u=80508 ib_ahead_query:u=10637 ib_no_command:u=<not counted> bub_b:u=<not counted> 
+code_192_0 G2 l2_query:u=39993 l2_hit:u=21963 ib_disp_itlb_miss:u=1884 cycles:u=382406 
+code_512_28066 G0 cycles:u=793886408 instructions:u=512520268 ib_disp_miss:u=204274 ib_ahead_miss:u=37751108 
+code_512_28066 G1 ib_disp_query:u=859571 ib_ahead_query:u=37357125 ib_no_command:u=46369672 bub_b:u=229604623 
+code_512_28066 G2 l2_query:u=301584485 l2_hit:u=222144015 ib_disp_itlb_miss:u=1884 cycles:u=791050556 
+code_512_0 G0 cycles:u=359027 instructions:u=107703 ib_disp_miss:u=<not counted> ib_ahead_miss:u=<not counted> 
+code_512_0 G1 ib_disp_query:u=95567 ib_ahead_query:u=10616 ib_no_command:u=76996 bub_b:u=<not counted> 
+code_512_0 G2 l2_query:u=39758 l2_hit:u=21996 ib_disp_itlb_miss:u=1888 cycles:u=374667 
+code_2048_7455 G0 cycles:u=1026866379 instructions:u=521292050 ib_disp_miss:u=44580 ib_ahead_miss:u=37650517 
+code_2048_7455 G1 ib_disp_query:u=378434 ib_ahead_query:u=37377952 ib_no_command:u=196258574 bub_b:u=304318797 
+code_2048_7455 G2 l2_query:u=301833891 l2_hit:u=5035766 ib_disp_itlb_miss:u=14336 cycles:u=1023988196 
+code_2048_0 G0 cycles:u=389098 instructions:u=107718 ib_disp_miss:u=<not counted> ib_ahead_miss:u=<not counted> 
+code_2048_0 G1 ib_disp_query:u=31062 ib_ahead_query:u=10620 ib_no_command:u=79615 bub_b:u=<not counted> 
+code_2048_0 G2 l2_query:u=39638 l2_hit:u=21876 ib_disp_itlb_miss:u=1891 cycles:u=356393 
+tlb_64_4096_0_10000000 G0 
+tlb_64_4096_0_10000000 G1 
+tlb_64_4096_0_0 G0 
+tlb_64_4096_0_0 G1 
+tlb_256_4096_0_10000000 G0 
+tlb_256_4096_0_10000000 G1 
+tlb_256_4096_0_0 G0 
+tlb_256_4096_0_0 G1 
+tlb_512_4096_0_10000000 G0 
+tlb_512_4096_0_10000000 G1 
+tlb_512_4096_0_0 G0 
+tlb_512_4096_0_0 G1 
+tlb_768_4096_0_10000000 G0 
+tlb_768_4096_0_10000000 G1 
+tlb_768_4096_0_0 G0 
+tlb_768_4096_0_0 G1 
+tlb_1024_4096_0_10000000 G0 
+tlb_1024_4096_0_10000000 G1 
+tlb_1024_4096_0_0 G0 
+tlb_1024_4096_0_0 G1 
+tlb_2048_4096_0_10000000 G0 
+tlb_2048_4096_0_10000000 G1 
+tlb_2048_4096_0_0 G0 
+tlb_2048_4096_0_0 G1 
+tlb_2_1048576_0_10000000 G0 
+tlb_2_1048576_0_10000000 G1 
+tlb_2_1048576_0_0 G0 
+tlb_2_1048576_0_0 G1 
+tlb_3_1048576_0_10000000 G0 
+tlb_3_1048576_0_10000000 G1 
+tlb_3_1048576_0_0 G0 
+tlb_3_1048576_0_0 G1 
+tlb_4_1048576_0_10000000 G0 
+tlb_4_1048576_0_10000000 G1 
+tlb_4_1048576_0_0 G0 
+tlb_4_1048576_0_0 G1 
+tlb_6_1048576_0_10000000 G0 
+tlb_6_1048576_0_10000000 G1 
+tlb_6_1048576_0_0 G0 
+tlb_6_1048576_0_0 G1 
+tlb_64_2097152_1_10000000 G0 
+tlb_64_2097152_1_10000000 G1 
+tlb_64_2097152_1_0 G0 
+tlb_64_2097152_1_0 G1 
+tlb_256_2097152_1_10000000 G0 
+tlb_256_2097152_1_10000000 G1 
+tlb_256_2097152_1_0 G0 
+tlb_256_2097152_1_0 G1 
+tlb_300_2097152_1_10000000 G0 
+tlb_300_2097152_1_10000000 G1 
+tlb_300_2097152_1_0 G0 
+tlb_300_2097152_1_0 G1 
+tlb_512_2097152_1_10000000 G0 
+tlb_512_2097152_1_10000000 G1 
+tlb_512_2097152_1_0 G0 
+tlb_512_2097152_1_0 G1 
+tlb_1_536870912_1_10000000 G0 
+tlb_1_536870912_1_10000000 G1 
+tlb_1_536870912_1_0 G0 
+tlb_1_536870912_1_0 G1 
+tlb_2_536870912_1_10000000 G0 
+tlb_2_536870912_1_10000000 G1 
+tlb_2_536870912_1_0 G0 
+tlb_2_536870912_1_0 G1 
+tlb_3_536870912_1_10000000 G0 
+tlb_3_536870912_1_10000000 G1 
+tlb_3_536870912_1_0 G0 
+tlb_3_536870912_1_0 G1 
+call_1_0 G0 cycles:u=759616533 instructions:u=439644903 bub_b_chain_spillfill:u=15 bub_b_rf_spillfill:u=195 
+call_1_0 G1 bub_b_chain_ret_nrdy:u=0 bub_b_chain_rd_nrdy:u=7 bub_e0_call_blocks_chain:u=0 cycles:u=761149922 
+call_1_1 G0 cycles:u=821102742 instructions:u=558876921 bub_b_chain_spillfill:u=7 bub_b_rf_spillfill:u=0 
+call_1_1 G1 bub_b_chain_ret_nrdy:u=6 bub_b_chain_rd_nrdy:u=7 bub_e0_call_blocks_chain:u=0 cycles:u=821063316 
+call_2_0 G0 cycles:u=568584577 instructions:u=299706151 bub_b_chain_spillfill:u=0 bub_b_rf_spillfill:u=194 
+call_2_0 G1 bub_b_chain_ret_nrdy:u=6 bub_b_chain_rd_nrdy:u=8 bub_e0_call_blocks_chain:u=0 cycles:u=572316364 
+call_2_1 G0 cycles:u=649624474 instructions:u=419512028 bub_b_chain_spillfill:u=15 bub_b_rf_spillfill:u=252 
+call_2_1 G1 bub_b_chain_ret_nrdy:u=0 bub_b_chain_rd_nrdy:u=7 bub_e0_call_blocks_chain:u=0 cycles:u=651265828 
+call_4_0 G0 cycles:u=483824914 instructions:u=229193500 bub_b_chain_spillfill:u=0 bub_b_rf_spillfill:u=7 
+call_4_0 G1 bub_b_chain_ret_nrdy:u=5 bub_b_chain_rd_nrdy:u=7 bub_e0_call_blocks_chain:u=0 cycles:u=487246430 
+call_4_1 G0 cycles:u=528666539 instructions:u=349329263 bub_b_chain_spillfill:u=0 bub_b_rf_spillfill:u=644 
+call_4_1 G1 bub_b_chain_ret_nrdy:u=6 bub_b_chain_rd_nrdy:u=8 bub_e0_call_blocks_chain:u=0 cycles:u=531139377 
+call_8_0 G0 cycles:u=441106343 instructions:u=194794578 bub_b_chain_spillfill:u=168 bub_b_rf_spillfill:u=543 
+call_8_0 G1 bub_b_chain_ret_nrdy:u=74 bub_b_chain_rd_nrdy:u=8 bub_e0_call_blocks_chain:u=0 cycles:u=444705906 
+call_8_1 G0 cycles:u=470340507 instructions:u=314465345 bub_b_chain_spillfill:u=275 bub_b_rf_spillfill:u=2101 
+call_8_1 G1 bub_b_chain_ret_nrdy:u=0 bub_b_chain_rd_nrdy:u=7 bub_e0_call_blocks_chain:u=0 cycles:u=472051258 
+call_16_0 G0 cycles:u=420761628 instructions:u=177227784 bub_b_chain_spillfill:u=951 bub_b_rf_spillfill:u=1695 
+call_16_0 G1 bub_b_chain_ret_nrdy:u=408 bub_b_chain_rd_nrdy:u=7 bub_e0_call_blocks_chain:u=0 cycles:u=422671685 
+call_16_1 G0 cycles:u=499952090 instructions:u=296503451 bub_b_chain_spillfill:u=1109 bub_b_rf_spillfill:u=71542955 
+call_16_1 G1 bub_b_chain_ret_nrdy:u=72 bub_b_chain_rd_nrdy:u=7 bub_e0_call_blocks_chain:u=0 cycles:u=503299784 
+call_32_0 G0 cycles:u=424665222 instructions:u=168154681 bub_b_chain_spillfill:u=13143347 bub_b_rf_spillfill:u=32026639 
+call_32_0 G1 bub_b_chain_ret_nrdy:u=1248863 bub_b_chain_rd_nrdy:u=8 bub_e0_call_blocks_chain:u=0 cycles:u=426987591 
+call_32_1 G0 cycles:u=602177050 instructions:u=288387330 bub_b_chain_spillfill:u=13108548 bub_b_rf_spillfill:u=155925805 
+call_32_1 G1 bub_b_chain_ret_nrdy:u=624133 bub_b_chain_rd_nrdy:u=8 bub_e0_call_blocks_chain:u=0 cycles:u=602659252 
+call_64_0 G0 cycles:u=437045756 instructions:u=164225548 bub_b_chain_spillfill:u=36653713 bub_b_rf_spillfill:u=76103586 
+call_64_0 G1 bub_b_chain_ret_nrdy:u=627909 bub_b_chain_rd_nrdy:u=7 bub_e0_call_blocks_chain:u=0 cycles:u=438575818 
+call_64_1 G0 cycles:u=689022970 instructions:u=284112131 bub_b_chain_spillfill:u=36526542 bub_b_rf_spillfill:u=198131198 
+call_64_1 G1 bub_b_chain_ret_nrdy:u=315784 bub_b_chain_rd_nrdy:u=7 bub_e0_call_blocks_chain:u=0 cycles:u=689340290 
+call_128_0 G0 cycles:u=443446270 instructions:u=161625090 bub_b_chain_spillfill:u=48341713 bub_b_rf_spillfill:u=98430945 
+call_128_0 G1 bub_b_chain_ret_nrdy:u=319958 bub_b_chain_rd_nrdy:u=8 bub_e0_call_blocks_chain:u=0 cycles:u=445859231 
+call_128_1 G0 cycles:u=730480720 instructions:u=281589275 bub_b_chain_spillfill:u=48420657 bub_b_rf_spillfill:u=219526791 
+call_128_1 G1 bub_b_chain_ret_nrdy:u=167183 bub_b_chain_rd_nrdy:u=8 bub_e0_call_blocks_chain:u=0 cycles:u=734325289 
+chase_131072_20000000 G0 cycles:u=222014688 instructions:u=60136817 l1_query:u=20110582 l1_ld_hit:u=73820 
+chase_131072_20000000 G1 l1_st_query:u=3109 l1_st_hit:u=22748 l2_query:u=20088836 l2_hit:u=20138545 
+chase_131072_20000000 G2 dtlb_query:u=20060429 dtlb_hit:u=20114043 stall_dtlb_miss:u=1496 cycles:u=222251996 
+chase_131072_0 G0 cycles:u=391897 instructions:u=136679 l1_query:u=110557 l1_ld_hit:u=73586 
+chase_131072_0 G1 l1_st_query:u=28494 l1_st_hit:u=11699 l2_query:u=<not counted> l2_hit:u=<not counted> 
+chase_131072_0 G2 dtlb_query:u=113622 dtlb_hit:u=110344 stall_dtlb_miss:u=5051 cycles:u=300034 
+chase_262144_20000000 G0 cycles:u=222456992 instructions:u=60162417 l1_query:u=20135822 l1_ld_hit:u=81386 
+chase_262144_20000000 G1 l1_st_query:u=177746 l1_st_hit:u=30770 l2_query:u=19978801 l2_hit:u=15846970 
+chase_262144_20000000 G2 dtlb_query:u=20126195 dtlb_hit:u=20125090 stall_dtlb_miss:u=3575 cycles:u=298917807 
+chase_262144_0 G0 cycles:u=455992 instructions:u=162279 l1_query:u=135755 l1_ld_hit:u=81169 
+chase_262144_0 G1 l1_st_query:u=0 l1_st_hit:u=15703 l2_query:u=<not counted> l2_hit:u=<not counted> 
+chase_262144_0 G2 dtlb_query:u=126421 dtlb_hit:u=135416 stall_dtlb_miss:u=5281 cycles:u=349625 
+chase_393216_20000000 G0 cycles:u=350671199 instructions:u=60187999 l1_query:u=20160988 l1_ld_hit:u=89073 
+chase_393216_20000000 G1 l1_st_query:u=44606 l1_st_hit:u=39531 l2_query:u=20137655 l2_hit:u=13984355 
+chase_393216_20000000 G2 dtlb_query:u=20204482 dtlb_hit:u=20163119 stall_dtlb_miss:u=3205 cycles:u=401129093 
+chase_393216_0 G0 cycles:u=474590 instructions:u=187879 l1_query:u=160932 l1_ld_hit:u=89096 
+chase_393216_0 G1 l1_st_query:u=61396 l1_st_hit:u=19759 l2_query:u=<not counted> l2_hit:u=<not counted> 
+chase_393216_0 G2 dtlb_query:u=161675 dtlb_hit:u=160451 stall_dtlb_miss:u=<not counted> cycles:u=<not counted> 
+chase_1048576_10000000 G0 cycles:u=319212851 instructions:u=30316161 l1_query:u=10287287 l1_ld_hit:u=120670 
+chase_1048576_10000000 G1 l1_st_query:u=0 l1_st_hit:u=79724 l2_query:u=10238839 l2_hit:u=554814 
+chase_1048576_10000000 G2 dtlb_query:u=10209767 dtlb_hit:u=10331820 stall_dtlb_miss:u=9821 cycles:u=322588000 
+chase_1048576_0 G0 cycles:u=718601 instructions:u=316045 l1_query:u=287236 l1_ld_hit:u=120491 
+chase_1048576_0 G1 l1_st_query:u=98163 l1_st_hit:u=40333 l2_query:u=<not counted> l2_hit:u=<not counted> 
+chase_1048576_0 G2 dtlb_query:u=281396 dtlb_hit:u=286146 stall_dtlb_miss:u=8412 cycles:u=612561 
+chase_2097152_10000000 G0 cycles:u=331771670 instructions:u=30520943 l1_query:u=10489239 l1_ld_hit:u=163059 
+chase_2097152_10000000 G1 l1_st_query:u=280 l1_st_hit:u=14633 l2_query:u=11684064 l2_hit:u=297311 
+chase_2097152_10000000 G2 dtlb_query:u=10250335 dtlb_hit:u=10571434 stall_dtlb_miss:u=21773 cycles:u=333164496 
+chase_2097152_0 G0 cycles:u=1217005 instructions:u=520826 l1_query:u=488834 l1_ld_hit:u=163093 
+chase_2097152_0 G1 l1_st_query:u=134431 l1_st_hit:u=73067 l2_query:u=<not counted> l2_hit:u=<not counted> 
+chase_2097152_0 G2 dtlb_query:u=293911 dtlb_hit:u=486741 stall_dtlb_miss:u=15514 cycles:u=1766119 
+chase_8388608_5000000 G0 cycles:u=242863800 instructions:u=16749725 l1_query:u=9938440 l1_ld_hit:u=414752 
+chase_8388608_5000000 G1 l1_st_query:u=928110 l1_st_hit:u=533607 l2_query:u=10151628 l2_hit:u=3767186 
+chase_8388608_5000000 G2 dtlb_query:u=9271747 dtlb_hit:u=6988835 stall_dtlb_miss:u=16859774 cycles:u=290838944 
+chase_8388608_0 G0 cycles:u=6096579 instructions:u=1749623 l1_query:u=1780663 l1_ld_hit:u=414405 
+chase_8388608_0 G1 l1_st_query:u=1091661 l1_st_hit:u=431036 l2_query:u=2269922 l2_hit:u=753878 
+chase_8388608_0 G2 dtlb_query:u=2066498 dtlb_hit:u=1886582 stall_dtlb_miss:u=661801 cycles:u=3266902 
+chase_16777216_3000000 G0 cycles:u=490796015 instructions:u=12388145 l1_query:u=8978346 l1_ld_hit:u=747295 
+chase_16777216_3000000 G1 l1_st_query:u=1782082 l1_st_hit:u=873268 l2_query:u=10904901 l2_hit:u=4514112 
+chase_16777216_3000000 G2 dtlb_query:u=8213801 dtlb_hit:u=6248499 stall_dtlb_miss:u=14677258 cycles:u=543039891 
+chase_16777216_0 G0 cycles:u=14833091 instructions:u=3388044 l1_query:u=3523742 l1_ld_hit:u=747170 
+chase_16777216_0 G1 l1_st_query:u=1973908 l1_st_hit:u=1041586 l2_query:u=4793871 l2_hit:u=1930430 
+chase_16777216_0 G2 dtlb_query:u=3017959 dtlb_hit:u=3147243 stall_dtlb_miss:u=1569213 cycles:u=14248307 
+chase_33554432_2000000 G0 cycles:u=436132587 instructions:u=12664941 l1_query:u=10830553 l1_ld_hit:u=1407026 
+chase_33554432_2000000 G1 l1_st_query:u=3948480 l1_st_hit:u=1046659 l2_query:u=13954465 l2_hit:u=6169654 
+chase_33554432_2000000 G2 dtlb_query:u=10989960 dtlb_hit:u=8257949 stall_dtlb_miss:u=11300980 cycles:u=435004515 
+chase_33554432_0 G0 cycles:u=32772409 instructions:u=6664861 l1_query:u=7008030 l1_ld_hit:u=1406908 
+chase_33554432_0 G1 l1_st_query:u=3653532 l1_st_hit:u=988243 l2_query:u=10681642 l2_hit:u=4615241 
+chase_33554432_0 G2 dtlb_query:u=6962450 dtlb_hit:u=6148194 stall_dtlb_miss:u=1730793 cycles:u=33980427 
+tlb_64_4096_0_10000000 G0 cycles:u=31058228 instructions:u=30473708 dtlb_query:u=10305991 dtlb_hit:u=10304044 
+tlb_64_4096_0_10000000 G1 stall_dtlb_miss:u=8171 stall_dtlb:u=11504 l1_query:u=10208515 cycles:u=32625170 
+tlb_64_4096_0_0 G0 cycles:u=1138268 instructions:u=473579 dtlb_query:u=306027 dtlb_hit:u=304080 
+tlb_64_4096_0_0 G1 stall_dtlb_miss:u=7340 stall_dtlb:u=8604 l1_query:u=199697 cycles:u=757055 
+tlb_256_4096_0_10000000 G0 cycles:u=31152919 instructions:u=30474302 dtlb_query:u=10306968 dtlb_hit:u=10304236 
+tlb_256_4096_0_10000000 G1 stall_dtlb_miss:u=5028 stall_dtlb:u=13412 l1_query:u=9143035 cycles:u=30996104 
+tlb_256_4096_0_0 G0 cycles:u=1114884 instructions:u=474170 dtlb_query:u=306900 dtlb_hit:u=304196 
+tlb_256_4096_0_0 G1 stall_dtlb_miss:u=8128 stall_dtlb:u=10161 l1_query:u=282827 cycles:u=984715 
+tlb_512_4096_0_10000000 G0 cycles:u=111209909 instructions:u=30475068 dtlb_query:u=10308390 dtlb_hit:u=10304464 
+tlb_512_4096_0_10000000 G1 stall_dtlb_miss:u=9064 stall_dtlb:u=9945540 l1_query:u=9958462 cycles:u=111371325 
+tlb_512_4096_0_0 G0 cycles:u=1117544 instructions:u=474917 dtlb_query:u=308173 dtlb_hit:u=304443 
+tlb_512_4096_0_0 G1 stall_dtlb_miss:u=11726 stall_dtlb:u=10924 l1_query:u=136053 cycles:u=544336 
+tlb_768_4096_0_10000000 G0 cycles:u=112576949 instructions:u=30475838 dtlb_query:u=10377218 dtlb_hit:u=10304763 
+tlb_768_4096_0_10000000 G1 stall_dtlb_miss:u=380532 stall_dtlb:u=10488700 l1_query:u=10007960 cycles:u=111871557 
+tlb_768_4096_0_0 G0 cycles:u=1135959 instructions:u=475685 dtlb_query:u=309414 dtlb_hit:u=304676 
+tlb_768_4096_0_0 G1 stall_dtlb_miss:u=12970 stall_dtlb:u=15084 l1_query:u=300501 cycles:u=1044097 
+tlb_1024_4096_0_10000000 G0 cycles:u=213458180 instructions:u=30476554 dtlb_query:u=15353686 dtlb_hit:u=10304958 
+tlb_1024_4096_0_10000000 G1 stall_dtlb_miss:u=25994180 stall_dtlb:u=30566516 l1_query:u=15030626 cycles:u=210850577 
+tlb_1024_4096_0_0 G0 cycles:u=1152350 instructions:u=476400 dtlb_query:u=310699 dtlb_hit:u=304897 
+tlb_1024_4096_0_0 G1 stall_dtlb_miss:u=13042 stall_dtlb:u=15299 l1_query:u=300589 cycles:u=923053 
+tlb_2048_4096_0_10000000 G0 cycles:u=317531932 instructions:u=30479627 dtlb_query:u=20354935 dtlb_hit:u=10325505 
+tlb_2048_4096_0_10000000 G1 stall_dtlb_miss:u=50215163 stall_dtlb:u=50308635 l1_query:u=20219708 cycles:u=315993385 
+tlb_2048_4096_0_0 G0 cycles:u=1223071 instructions:u=479469 dtlb_query:u=315748 dtlb_hit:u=305881 
+tlb_2048_4096_0_0 G1 stall_dtlb_miss:u=17867 stall_dtlb:u=20699 l1_query:u=454301 cycles:u=1087389 
+tlb_2_1048576_0_10000000 G0 cycles:u=31087335 instructions:u=30473486 dtlb_query:u=10305613 dtlb_hit:u=10303919 
+tlb_2_1048576_0_10000000 G1 stall_dtlb_miss:u=4082 stall_dtlb:u=10820 l1_query:u=9561405 cycles:u=31294669 
+tlb_2_1048576_0_0 G0 cycles:u=1086520 instructions:u=473333 dtlb_query:u=305487 dtlb_hit:u=303836 
+tlb_2_1048576_0_0 G1 stall_dtlb_miss:u=7011 stall_dtlb:u=8421 l1_query:u=247795 cycles:u=900440 
+tlb_3_1048576_0_10000000 G0 cycles:u=31083279 instructions:u=30473489 dtlb_query:u=10305624 dtlb_hit:u=10303902 
+tlb_3_1048576_0_10000000 G1 stall_dtlb_miss:u=4867 stall_dtlb:u=11394 l1_query:u=9716904 cycles:u=31396717 
+tlb_3_1048576_0_0 G0 cycles:u=1109691 instructions:u=473334 dtlb_query:u=305569 dtlb_hit:u=303869 
+tlb_3_1048576_0_0 G1 stall_dtlb_miss:u=6925 stall_dtlb:u=8411 l1_query:u=192960 cycles:u=760190 
+tlb_4_1048576_0_10000000 G0 cycles:u=231158108 instructions:u=30473493 dtlb_query:u=17448527 dtlb_hit:u=10303922 
+tlb_4_1048576_0_10000000 G1 stall_dtlb_miss:u=36464224 stall_dtlb:u=35527372 l1_query:u=17377351 cycles:u=230262512 
+tlb_4_1048576_0_0 G0 cycles:u=1121360 instructions:u=473338 dtlb_query:u=305569 dtlb_hit:u=303862 
+tlb_4_1048576_0_0 G1 stall_dtlb_miss:u=2689 stall_dtlb:u=7571 l1_query:u=324746 cycles:u=1158664 
+tlb_6_1048576_0_10000000 G0 cycles:u=311130846 instructions:u=30473518 dtlb_query:u=20305780 dtlb_hit:u=10303983 
+tlb_6_1048576_0_10000000 G1 stall_dtlb_miss:u=50401023 stall_dtlb:u=49670330 l1_query:u=20293789 cycles:u=310766995 
+tlb_6_1048576_0_0 G0 cycles:u=1112352 instructions:u=473343 dtlb_query:u=305565 dtlb_hit:u=303872 
+tlb_6_1048576_0_0 G1 stall_dtlb_miss:u=6259 stall_dtlb:u=8040 l1_query:u=298577 cycles:u=1027233 
+tlb_64_2097152_1_10000000 G0 cycles:u=31106437 instructions:u=30473688 dtlb_query:u=10305985 dtlb_hit:u=10303981 
+tlb_64_2097152_1_10000000 G1 stall_dtlb_miss:u=11710 stall_dtlb:u=12444 l1_query:u=11021816 cycles:u=30962469 
+tlb_64_2097152_1_0 G0 cycles:u=1108967 instructions:u=473604 dtlb_query:u=305994 dtlb_hit:u=303981 
+tlb_64_2097152_1_0 G1 stall_dtlb_miss:u=9883 stall_dtlb:u=11276 l1_query:u=176713 cycles:u=417932 
+tlb_256_2097152_1_10000000 G0 cycles:u=31211084 instructions:u=30473571 dtlb_query:u=10306865 dtlb_hit:u=10303741 
+tlb_256_2097152_1_10000000 G1 stall_dtlb_miss:u=7980 stall_dtlb:u=16460 l1_query:u=9208104 cycles:u=30396148 
+tlb_256_2097152_1_0 G0 cycles:u=1131515 instructions:u=473556 dtlb_query:u=306690 dtlb_hit:u=303797 
+tlb_256_2097152_1_0 G1 stall_dtlb_miss:u=3461 stall_dtlb:u=11354 l1_query:u=538691 cycles:u=1394538 
+tlb_300_2097152_1_10000000 G0 cycles:u=329086115 instructions:u=30473705 dtlb_query:u=16174837 dtlb_hit:u=10303749 
+tlb_300_2097152_1_10000000 G1 stall_dtlb_miss:u=20557582 stall_dtlb:u=25015583 l1_query:u=13516132 cycles:u=328746533 
+tlb_300_2097152_1_0 G0 cycles:u=1148814 instructions:u=473690 dtlb_query:u=306963 dtlb_hit:u=303863 
+tlb_300_2097152_1_0 G1 stall_dtlb_miss:u=13203 stall_dtlb:u=14602 l1_query:u=175995 cycles:u=447175 
+tlb_512_2097152_1_10000000 G0 cycles:u=591353414 instructions:u=30474359 dtlb_query:u=30308152 dtlb_hit:u=10304056 
+tlb_512_2097152_1_10000000 G1 stall_dtlb_miss:u=70322673 stall_dtlb:u=69773037 l1_query:u=20180343 cycles:u=591219917 
+tlb_512_2097152_1_0 G0 cycles:u=1183333 instructions:u=474323 dtlb_query:u=308240 dtlb_hit:u=304120 
+tlb_512_2097152_1_0 G1 stall_dtlb_miss:u=9969 stall_dtlb:u=15970 l1_query:u=415643 cycles:u=1032509 
+tlb_1_536870912_1_10000000 G0 cycles:u=31081637 instructions:u=30472825 dtlb_query:u=10305268 dtlb_hit:u=10303503 
+tlb_1_536870912_1_10000000 G1 stall_dtlb_miss:u=10530 stall_dtlb:u=11646 l1_query:u=11210345 cycles:u=34463744 
+tlb_1_536870912_1_0 G0 cycles:u=1077067 instructions:u=472792 dtlb_query:u=305238 dtlb_hit:u=303553 
+tlb_1_536870912_1_0 G1 stall_dtlb_miss:u=3902 stall_dtlb:u=8089 l1_query:u=331689 cycles:u=1178006 
+tlb_2_536870912_1_10000000 G0 cycles:u=391124421 instructions:u=30472828 dtlb_query:u=30305298 dtlb_hit:u=10303511 
+tlb_2_536870912_1_10000000 G1 stall_dtlb_miss:u=69878325 stall_dtlb:u=69625149 l1_query:u=20240226 cycles:u=393090430 
+tlb_2_536870912_1_0 G0 cycles:u=1135027 instructions:u=472796 dtlb_query:u=305236 dtlb_hit:u=303545 
+tlb_2_536870912_1_0 G1 stall_dtlb_miss:u=6517 stall_dtlb:u=7825 l1_query:u=281190 cycles:u=957568 
+tlb_3_536870912_1_10000000 G0 cycles:u=391108993 instructions:u=30472813 dtlb_query:u=30305138 dtlb_hit:u=10303459 
+tlb_3_536870912_1_10000000 G1 stall_dtlb_miss:u=69711090 stall_dtlb:u=69636202 l1_query:u=20252286 cycles:u=393463261 
+tlb_3_536870912_1_0 G0 cycles:u=1125301 instructions:u=472796 dtlb_query:u=305365 dtlb_hit:u=303580 
+tlb_3_536870912_1_0 G1 stall_dtlb_miss:u=3116 stall_dtlb:u=8508 l1_query:u=322966 cycles:u=1151856 

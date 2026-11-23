@@ -1,0 +1,140 @@
+stand             CPI_hw CPI_mod     err  model split
+align_off0         1.182   1.176   -0.5%  issue:85 ctprep:13
+align_off128       1.205   1.176   -2.4%  issue:85 ctprep:13
+align_off192       1.194   1.176   -1.4%  issue:85 ctprep:13
+align_off224       1.174   1.176   +0.2%  issue:85 ctprep:13
+align_off248       1.276   1.176   -7.8%  issue:85 ctprep:13
+align_off32        1.194   1.176   -1.5%  issue:85 ctprep:13
+align_off64        1.173   1.176   +0.3%  issue:85 ctprep:13
+call_K16384        2.226   2.259   +1.5%  issue:44 nop:43 itarget:12
+call_K4096         1.990   2.240  +12.6%  issue:45 nop:43 itarget:12
+call_K512          1.992   1.965   -1.3%  issue:51 nop:49
+call_K64           1.975   1.959   -0.8%  issue:51 nop:49
+call_K8            1.969   1.966   -0.2%  issue:51 nop:49
+dist_D0            1.186   1.176   -0.8%  issue:85 ctprep:13
+dist_D1024         1.180   1.176   -0.3%  issue:85 ctprep:13
+dist_D16384        1.659   1.176  -29.1%  issue:85 ctprep:13
+dist_D256          1.179   1.176   -0.2%  issue:85 ctprep:13
+dist_D4096         1.182   1.176   -0.4%  issue:85 ctprep:13
+dist_D64           1.183   1.176   -0.6%  issue:85 ctprep:13
+dist_D65536        3.001   3.700  +23.3%  issue:27 ctprep:4 itarget:68
+far16_D65536       2.945   3.858  +31.0%  issue:26 ctprep:5 itarget:69
+far256_D16384      5.541   1.594  -71.2%  issue:63 ctprep:12 itarget:25
+far64_D65536       8.139   8.134   -0.1%  issue:12 itarget:34 itlb:51
+farseq_D0K4096     1.239   1.221   -1.5%  issue:82 ctprep:15 icache:3
+foot1_K1024        1.214   1.200   -1.2%  issue:83 ctprep:17
+foot1_K16384       1.251   1.336   +6.9%  issue:75 ctprep:13 icache:12
+foot1_K256         1.190   1.199   +0.7%  issue:83 ctprep:17
+foot1_K4096        1.230   1.221   -0.8%  issue:82 ctprep:15 icache:3
+foot1_K64          1.188   1.196   +0.7%  issue:84 ctprep:16
+foot1_K8           1.180   1.176   -0.3%  issue:85 ctprep:13
+foot_K1024         1.197   1.200   +0.2%  issue:83 ctprep:17
+foot_K16384        1.215   1.336  +10.0%  issue:75 ctprep:13 icache:12
+foot_K256          1.197   1.199   +0.2%  issue:83 ctprep:17
+foot_K4096         1.261   1.221   -3.2%  issue:82 ctprep:15 icache:3
+foot_K64           1.201   1.196   -0.4%  issue:84 ctprep:16
+foot_K8            1.202   1.176   -2.1%  issue:85 ctprep:13
+ibr_D0             1.964   1.961   -0.2%  issue:51 ibranch:48
+ibr_D256           1.961   1.961   -0.0%  issue:51 ibranch:48
+ibr_D4096          1.964   1.961   -0.1%  issue:51 ibranch:48
+ibr_D65536         3.654   4.484  +22.7%  issue:22 ibranch:21 itarget:56
+ibrfoot_K16384     4.035   4.049   +0.4%  issue:25 ibranch:74
+ibrfoot_K4096      3.996   3.996   +0.0%  issue:25 ibranch:75
+ibrfoot_K512       3.978   3.969   -0.2%  issue:25 ibranch:75
+ibrfoot_K64        3.778   3.770   -0.2%  issue:27 ibranch:73
+ibrfoot_K8         2.821   2.815   -0.2%  issue:36 ibranch:63
+it128k_K8          1.184   1.176   -0.7%  issue:85 ctprep:13
+it1m_K2            1.143   1.143   -0.0%  issue:87 nop:4 ctprep:8
+it1m_K3            1.160   1.154   -0.5%  issue:87 nop:3 ctprep:10
+it1m_K4            1.153   1.161   +0.7%  issue:86 ctprep:11
+it1m_K5            1.173   1.167   -0.5%  issue:86 ctprep:12
+it1m_K6            3.754   1.171  -68.8%  issue:85 ctprep:13
+it1m_K8            5.427   4.882  -10.0%  issue:20 ctprep:3 itlb:76
+it256k_K4          1.166   1.161   -0.4%  issue:86 ctprep:11
+it256k_K8          5.422   4.882  -10.0%  issue:20 ctprep:3 itlb:76
+it512k_K4          1.143   1.161   +1.6%  issue:86 ctprep:11
+it512k_K8          5.435   4.882  -10.2%  issue:20 ctprep:3 itlb:76
+it64k_K8           1.189   1.176   -1.1%  issue:85 ctprep:13
+itct_K2            1.140   1.143   +0.3%  issue:87 nop:4 ctprep:8
+itct_K3            1.158   1.154   -0.3%  issue:87 nop:3 ctprep:10
+itct_K4            1.208   1.161   -3.9%  issue:86 ctprep:11
+itct_K8            1.184   1.176   -0.6%  issue:85 ctprep:13
+itlb_P16           1.192   1.187   -0.4%  issue:84 ctprep:15
+itlb_P24           1.188   1.191   +0.3%  issue:84 ctprep:15
+itlb_P28           1.209   1.192   -1.4%  issue:84 ctprep:16
+itlb_P32           1.227   1.193   -2.8%  issue:84 ctprep:16
+itlb_P40           1.198   1.194   -0.3%  issue:84 ctprep:16
+itlb_P48           1.235   1.195   -3.3%  issue:84 ctprep:16
+itlb_P64           1.199   1.196   -0.2%  issue:84 ctprep:16
+itlb_P96           1.253   1.198   -4.4%  issue:84 ctprep:16
+prep_d1_far        1.647   1.647   -0.0%  issue:61 ctprep:38
+prep_d1_near       1.641   1.647   +0.4%  issue:61 ctprep:38
+prep_d2_far        1.484   1.490   +0.4%  issue:67 ctprep:32
+prep_d2_near       1.518   1.490   -1.9%  issue:67 ctprep:32
+prep_d3_far        1.327   1.333   +0.5%  issue:75 ctprep:24
+prep_d3_near       1.355   1.333   -1.6%  issue:75 ctprep:24
+prep_d4_far        1.170   1.176   +0.6%  issue:85 ctprep:13
+prep_d4_near       1.183   1.176   -0.6%  issue:85 ctprep:13
+prep_d5_far        1.018   1.017   -0.1%  issue:98
+prep_d5_near       1.023   1.017   -0.6%  issue:98
+prep_d6_far        1.018   1.015   -0.3%  issue:99
+prep_d6_near       1.018   1.015   -0.3%  issue:99
+prep_d8_far        1.032   1.012   -2.0%  issue:99
+prep_d8_near       1.005   1.012   +0.7%  issue:99
+sp_S12288_K16_a    1.280   1.187   -7.3%  issue:84 ctprep:15
+sp_S12288_K16_s    1.197   1.187   -0.8%  issue:84 ctprep:15
+sp_S12288_K32_a    1.676   1.444  -13.8%  issue:69 ctprep:13 itarget:17
+sp_S12288_K32_s    1.167   1.193   +2.2%  issue:84 ctprep:16
+sp_S12288_K64_a    4.337   4.005   -7.7%  issue:25 ctprep:5 itarget:70
+sp_S12288_K64_s    1.156   1.196   +3.5%  issue:84 ctprep:16
+sp_S12288_K8_a     1.150   1.176   +2.3%  issue:85 ctprep:13
+sp_S12288_K8_s     1.165   1.176   +1.0%  issue:85 ctprep:13
+sp_S16384_K16_a    3.928   3.858   -1.8%  issue:26 ctprep:5 itarget:69
+sp_S16384_K16_s    2.444   1.187  -51.4%  issue:84 ctprep:15
+sp_S16384_K32_a    4.051   4.704  +16.1%  issue:21 ctprep:4 itarget:75
+sp_S16384_K32_s    2.731   1.193  -56.3%  issue:84 ctprep:16
+sp_S16384_K64_a    8.439   9.051   +7.3%  issue:11 itarget:87
+sp_S16384_K64_s    3.697   1.196  -67.6%  issue:84 ctprep:16
+sp_S16384_K8_a     2.599   2.018  -22.4%  issue:50 ctprep:8 itarget:42
+sp_S16384_K8_s     1.715   1.176  -31.4%  issue:85 ctprep:13
+sp_S2048_K16_a     1.167   1.187   +1.7%  issue:84 ctprep:15
+sp_S2048_K16_s     1.173   1.187   +1.2%  issue:84 ctprep:15
+sp_S2048_K32_a     1.219   1.193   -2.2%  issue:84 ctprep:16
+sp_S2048_K32_s     1.319   1.193   -9.5%  issue:84 ctprep:16
+sp_S2048_K64_a     1.313   1.326   +1.0%  issue:75 ctprep:15 itarget:10
+sp_S2048_K64_s     1.336   1.456   +8.9%  issue:69 ctprep:13 itarget:18
+sp_S2048_K8_a      1.159   1.176   +1.5%  issue:85 ctprep:13
+sp_S2048_K8_s      1.160   1.176   +1.4%  issue:85 ctprep:13
+sp_S32768_K16_a    3.958   5.270  +33.2%  issue:19 ctprep:3 itarget:77
+sp_S32768_K16_s    2.908   3.387  +16.5%  issue:30 ctprep:5 itarget:65
+sp_S32768_K32_a    8.642   8.912   +3.1%  issue:11 itarget:87
+sp_S32768_K32_s    3.643   3.673   +0.8%  issue:27 ctprep:5 itarget:68
+sp_S32768_K64_a   14.094  14.353   +1.8%  issue:7 itarget:55 itlb:37
+sp_S32768_K64_s    8.042   8.050   +0.1%  issue:12 itarget:33 itlb:52
+sp_S32768_K8_a     3.729   3.700   -0.8%  issue:27 ctprep:4 itarget:68
+sp_S32768_K8_s     3.012   2.859   -5.1%  issue:35 ctprep:5 itarget:59
+sp_S4096_K16_a     1.303   1.187   -8.9%  issue:84 ctprep:15
+sp_S4096_K16_s     1.172   1.187   +1.3%  issue:84 ctprep:15
+sp_S4096_K32_a     1.682   1.444  -14.2%  issue:69 ctprep:13 itarget:17
+sp_S4096_K32_s     1.328   1.193  -10.1%  issue:84 ctprep:16
+sp_S4096_K64_a     4.380   4.005   -8.6%  issue:25 ctprep:5 itarget:70
+sp_S4096_K64_s     1.161   1.196   +3.0%  issue:84 ctprep:16
+sp_S4096_K8_a      1.159   1.176   +1.5%  issue:85 ctprep:13
+sp_S4096_K8_s      1.182   1.176   -0.5%  issue:85 ctprep:13
+sp_S65536_K16_a    8.711   8.659   -0.6%  issue:12 itarget:86
+sp_S65536_K16_s    2.985   3.858  +29.3%  issue:26 ctprep:5 itarget:69
+sp_S65536_K32_a   13.632  14.123   +3.6%  issue:7 itarget:55 itlb:37
+sp_S65536_K32_s    5.655   3.953  -30.1%  issue:25 ctprep:5 itarget:70
+sp_S65536_K64_a   13.926  14.353   +3.1%  issue:7 itarget:55 itlb:37
+sp_S65536_K64_s   11.322   8.134  -28.2%  issue:12 itarget:34 itlb:51
+sp_S65536_K8_a     3.700   6.220  +68.1%  issue:16 itarget:81
+sp_S65536_K8_s     3.050   3.700  +21.3%  issue:27 ctprep:4 itarget:68
+sp_S8192_K16_a     1.805   1.658   -8.1%  issue:60 ctprep:11 itarget:28
+sp_S8192_K16_s     1.184   1.187   +0.3%  issue:84 ctprep:15
+sp_S8192_K32_a     4.069   3.953   -2.9%  issue:25 ctprep:5 itarget:70
+sp_S8192_K32_s     1.262   1.193   -5.5%  issue:84 ctprep:16
+sp_S8192_K64_a     4.349   4.393   +1.0%  issue:23 ctprep:4 itarget:73
+sp_S8192_K64_s     1.159   1.196   +3.3%  issue:84 ctprep:16
+sp_S8192_K8_a      1.260   1.176   -6.6%  issue:85 ctprep:13
+sp_S8192_K8_s      1.304   1.176   -9.8%  issue:85 ctprep:13
+median |err| 1.5%, 90% 23.3%, n=138

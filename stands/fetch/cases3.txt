@@ -1,0 +1,8 @@
+itlb_P16 asm disp 16 4 4096 64 0 4 1123595
+itlb_P24 asm disp 24 4 4096 64 0 4 775193
+itlb_P28 asm disp 28 4 4096 64 0 4 671140
+itlb_P32 asm disp 32 4 4096 64 0 4 591715
+itlb_P40 asm disp 40 4 4096 64 0 4 478468
+itlb_P48 asm disp 48 4 4096 64 0 4 401606
+itlb_P64 asm disp 64 4 4096 64 0 4 303951
+itlb_P96 asm disp 96 4 4096 64 0 4 204498

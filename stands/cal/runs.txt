@@ -1,0 +1,116 @@
+chase_131072_20000000	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 131072 20000000
+chase_131072_20000000	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 131072 20000000
+chase_131072_20000000	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 131072 20000000
+chase_131072_0	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 131072 0
+chase_131072_0	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 131072 0
+chase_131072_0	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 131072 0
+chase_262144_20000000	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 262144 20000000
+chase_262144_20000000	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 262144 20000000
+chase_262144_20000000	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 262144 20000000
+chase_262144_0	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 262144 0
+chase_262144_0	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 262144 0
+chase_262144_0	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 262144 0
+chase_393216_20000000	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 393216 20000000
+chase_393216_20000000	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 393216 20000000
+chase_393216_20000000	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 393216 20000000
+chase_393216_0	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 393216 0
+chase_393216_0	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 393216 0
+chase_393216_0	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 393216 0
+chase_1048576_10000000	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 1048576 10000000
+chase_1048576_10000000	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 1048576 10000000
+chase_1048576_10000000	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 1048576 10000000
+chase_1048576_0	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 1048576 0
+chase_1048576_0	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 1048576 0
+chase_1048576_0	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 1048576 0
+chase_2097152_10000000	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 2097152 10000000
+chase_2097152_10000000	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 2097152 10000000
+chase_2097152_10000000	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 2097152 10000000
+chase_2097152_0	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 2097152 0
+chase_2097152_0	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 2097152 0
+chase_2097152_0	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 2097152 0
+chase_8388608_5000000	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 8388608 5000000
+chase_8388608_5000000	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 8388608 5000000
+chase_8388608_5000000	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 8388608 5000000
+chase_8388608_0	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 8388608 0
+chase_8388608_0	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 8388608 0
+chase_8388608_0	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 8388608 0
+chase_16777216_3000000	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 16777216 3000000
+chase_16777216_3000000	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 16777216 3000000
+chase_16777216_3000000	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 16777216 3000000
+chase_16777216_0	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 16777216 0
+chase_16777216_0	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 16777216 0
+chase_16777216_0	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 16777216 0
+chase_33554432_2000000	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 33554432 2000000
+chase_33554432_2000000	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 33554432 2000000
+chase_33554432_2000000	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 33554432 2000000
+chase_33554432_0	G0	cycles:u,instructions:u,l1_query:u,l1_ld_hit:u	./stand chase 33554432 0
+chase_33554432_0	G1	l1_st_query:u,l1_st_hit:u,l2_query:u,l2_hit:u	./stand chase 33554432 0
+chase_33554432_0	G2	dtlb_query:u,dtlb_hit:u,stall_dtlb_miss:u,cycles:u	./stand chase 33554432 0
+tlb_64_4096_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 64 4096 10000000 0
+tlb_64_4096_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 64 4096 10000000 0
+tlb_64_4096_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 64 4096 0 0
+tlb_64_4096_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 64 4096 0 0
+tlb_256_4096_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 256 4096 10000000 0
+tlb_256_4096_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 256 4096 10000000 0
+tlb_256_4096_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 256 4096 0 0
+tlb_256_4096_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 256 4096 0 0
+tlb_512_4096_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 512 4096 10000000 0
+tlb_512_4096_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 512 4096 10000000 0
+tlb_512_4096_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 512 4096 0 0
+tlb_512_4096_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 512 4096 0 0
+tlb_768_4096_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 768 4096 10000000 0
+tlb_768_4096_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 768 4096 10000000 0
+tlb_768_4096_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 768 4096 0 0
+tlb_768_4096_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 768 4096 0 0
+tlb_1024_4096_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 1024 4096 10000000 0
+tlb_1024_4096_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 1024 4096 10000000 0
+tlb_1024_4096_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 1024 4096 0 0
+tlb_1024_4096_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 1024 4096 0 0
+tlb_2048_4096_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 2048 4096 10000000 0
+tlb_2048_4096_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 2048 4096 10000000 0
+tlb_2048_4096_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 2048 4096 0 0
+tlb_2048_4096_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 2048 4096 0 0
+tlb_2_1048576_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 2 1048576 10000000 0
+tlb_2_1048576_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 2 1048576 10000000 0
+tlb_2_1048576_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 2 1048576 0 0
+tlb_2_1048576_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 2 1048576 0 0
+tlb_3_1048576_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 3 1048576 10000000 0
+tlb_3_1048576_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 3 1048576 10000000 0
+tlb_3_1048576_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 3 1048576 0 0
+tlb_3_1048576_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 3 1048576 0 0
+tlb_4_1048576_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 4 1048576 10000000 0
+tlb_4_1048576_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 4 1048576 10000000 0
+tlb_4_1048576_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 4 1048576 0 0
+tlb_4_1048576_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 4 1048576 0 0
+tlb_6_1048576_0_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 6 1048576 10000000 0
+tlb_6_1048576_0_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 6 1048576 10000000 0
+tlb_6_1048576_0_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 6 1048576 0 0
+tlb_6_1048576_0_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 6 1048576 0 0
+tlb_64_2097152_1_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 64 2097152 10000000 1
+tlb_64_2097152_1_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 64 2097152 10000000 1
+tlb_64_2097152_1_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 64 2097152 0 1
+tlb_64_2097152_1_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 64 2097152 0 1
+tlb_256_2097152_1_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 256 2097152 10000000 1
+tlb_256_2097152_1_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 256 2097152 10000000 1
+tlb_256_2097152_1_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 256 2097152 0 1
+tlb_256_2097152_1_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 256 2097152 0 1
+tlb_300_2097152_1_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 300 2097152 10000000 1
+tlb_300_2097152_1_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 300 2097152 10000000 1
+tlb_300_2097152_1_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 300 2097152 0 1
+tlb_300_2097152_1_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 300 2097152 0 1
+tlb_512_2097152_1_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 512 2097152 10000000 1
+tlb_512_2097152_1_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 512 2097152 10000000 1
+tlb_512_2097152_1_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 512 2097152 0 1
+tlb_512_2097152_1_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 512 2097152 0 1
+tlb_1_536870912_1_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 1 536870912 10000000 1
+tlb_1_536870912_1_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 1 536870912 10000000 1
+tlb_1_536870912_1_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 1 536870912 0 1
+tlb_1_536870912_1_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 1 536870912 0 1
+tlb_2_536870912_1_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 2 536870912 10000000 1
+tlb_2_536870912_1_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 2 536870912 10000000 1
+tlb_2_536870912_1_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 2 536870912 0 1
+tlb_2_536870912_1_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 2 536870912 0 1
+tlb_3_536870912_1_10000000	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 3 536870912 10000000 1
+tlb_3_536870912_1_10000000	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 3 536870912 10000000 1
+tlb_3_536870912_1_0	G0	cycles:u,instructions:u,dtlb_query:u,dtlb_hit:u	env NOFILL=1 ./stand tlb 3 536870912 0 1
+tlb_3_536870912_1_0	G1	stall_dtlb_miss:u,stall_dtlb:u,l1_query:u,cycles:u	env NOFILL=1 ./stand tlb 3 536870912 0 1
