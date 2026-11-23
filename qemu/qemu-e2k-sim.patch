@@ -1,0 +1,286 @@
+diff --git a/plugins/core.c b/plugins/core.c
+index bb105e8..c7dd815 100644
+--- a/plugins/core.c
++++ b/plugins/core.c
+@@ -268,9 +268,10 @@ static void qemu_plugin_vcpu_init__async(CPUState *cpu, run_on_cpu_data unused)
+     qemu_rec_mutex_lock(&plugin.lock);
+     plugin.num_vcpus = MAX(plugin.num_vcpus, cpu->cpu_index + 1);
+     plugin_cpu_update__locked(&cpu->cpu_index, NULL, NULL);
+-    success = g_hash_table_insert(plugin.cpu_ht, &cpu->cpu_index,
+-                                  &cpu->cpu_index);
+-    g_assert(success);
++    /* sim: a guest thread's cpu_index can be reused while the exited thread's entry is still in the table
++     * (e2k user mode, guests that create threads after others exited): replace instead of asserting */
++    g_hash_table_replace(plugin.cpu_ht, &cpu->cpu_index, &cpu->cpu_index);
++    (void)success;
+     plugin_grow_scoreboards__locked(cpu);
+     qemu_rec_mutex_unlock(&plugin.lock);
+ 
+diff --git a/target/e2k/alop.decode b/target/e2k/alop.decode
+index 76db50f..af939af 100644
+--- a/target/e2k/alop.decode
++++ b/target/e2k/alop.decode
+@@ -629,8 +629,8 @@ ldgdd               1----- ....... --0 00000001 11000000 . 1100111 ........ ....
+ #ornw_fw             1----- ------- -00 00000110 11000000 . 0000110 ........ ........ ........ @alf1
+ #xorw_fw             1----- ------- -00 00000110 11000000 . 0001000 ........ ........ ........ @alf1
+ #xornw_fw            1----- ------- -00 00000110 11000000 . 0001010 ........ ........ ........ @alf1
+-#addw_fw             1----- ------- -00 00000110 11000000 . 0010000 ........ ........ ........ @alf1
+-#subw_fw             1----- ------- -00 00000110 11000000 . 0010010 ........ ........ ........ @alf1
++addw_fw              1----- ------- -00 00000110 11000000 . 0010000 ........ ........ ........ @alf1
++subw_fw              1----- ------- -00 00000110 11000000 . 0010010 ........ ........ ........ @alf1
+ #sclw_fw             1----- ------- -00 00000110 ........ . 0010100 ........ ........ ........ @alf21
+ #scrw_fw             1----- ------- -00 00000110 ........ . 0010110 ........ ........ ........ @alf21
+ #shlw_fw             1----- ------- -00 00000110 ........ . 0011000 ........ ........ ........ @alf21
+diff --git a/target/e2k/cpu.h b/target/e2k/cpu.h
+index 2342ad4..1da6b02 100644
+--- a/target/e2k/cpu.h
++++ b/target/e2k/cpu.h
+@@ -633,7 +633,7 @@ typedef union {
+ 
+ typedef struct {
+     E2KAauPrefInstr pi;     /* prefetch instr */
+-    uint32_t cdi;   /* current data index */
++    int64_t cdi;   /* current data index */
+     uint32_t ldi;   /* loaded data index */
+     target_ulong last_page;
+     bool last_page_valid;
+@@ -648,11 +648,11 @@ typedef struct {
+     uint32_t fstr;
+     uint64_t ldm;
+     uint64_t ldv;
+-    uint32_t stis[16];
++    int64_t stis[16];   /* sim: 48-bit, sign-extended (kernel iset_v5.c signext(.,48)) */
+     uint32_t sti_tags;
+-    uint32_t incrs[8];
++    int64_t incrs[8];
+     uint32_t incr_tags;
+-    uint32_t inds[16];
++    int64_t inds[16];
+     uint32_t ind_tags;
+     E2KAad ds[32];
+     E2KAalda lda[64];
+diff --git a/target/e2k/helper.h b/target/e2k/helper.h
+index 202080b..64a11d7 100644
+--- a/target/e2k/helper.h
++++ b/target/e2k/helper.h
+@@ -21,10 +21,12 @@ DEF_HELPER_FLAGS_2(aau_load_program,    TCG_CALL_NO_RWG, void, env, i64)
+ DEF_HELPER_FLAGS_6(mova_ptr,            TCG_CALL_NO_RWG, tl, env, int, int, int, int, int)
+ DEF_HELPER_FLAGS_3(aau_am,              TCG_CALL_NO_RWG, void, env, int, int)
+ DEF_HELPER_FLAGS_4(aaurwd_aad,          TCG_CALL_NO_RWG, void, env, i32, i64, i32)
++DEF_HELPER_FLAGS_4(aaurws_aad,          TCG_CALL_NO_RWG, void, env, i32, i64, i32)
++DEF_HELPER_FLAGS_4(aaurw_aad_hi,          TCG_CALL_NO_RWG, void, env, i32, i64, i32)
+ DEF_HELPER_FLAGS_4(aaurwq_aad,          TCG_CALL_NO_RWG, void, env, i32, i128, i32)
+-DEF_HELPER_FLAGS_4(aaurwd_aaind,        TCG_CALL_NO_RWG, void, env, i32, i32, i32)
+-DEF_HELPER_FLAGS_4(aaurwd_aasti,        TCG_CALL_NO_RWG, void, env, i32, i32, i32)
+-DEF_HELPER_FLAGS_4(aaurwd_aaincr,       TCG_CALL_NO_RWG, void, env, i32, i32, i32)
++DEF_HELPER_FLAGS_4(aaurwd_aaind,        TCG_CALL_NO_RWG, void, env, i32, i64, i32)
++DEF_HELPER_FLAGS_4(aaurwd_aasti,        TCG_CALL_NO_RWG, void, env, i32, i64, i32)
++DEF_HELPER_FLAGS_4(aaurwd_aaincr,       TCG_CALL_NO_RWG, void, env, i32, i64, i32)
+ DEF_HELPER_FLAGS_3(aad_ptr,             TCG_CALL_NO_RWG_SE, i64, env, i32, i32)
+ DEF_HELPER_FLAGS_4(aasti_incr,          TCG_CALL_NO_RWG, void, env, i32, i32, i32)
+ 
+@@ -488,3 +490,7 @@ DEF_HELPER_FLAGS_6(stmqp_mlock, TCG_CALL_NO_RWG, i32, env, tl, vec, i32, i32, ve
+ 
+ #undef f80
+ #undef vec
++
++/* sim: adds_fw/subs_fw (x86 EFLAGS image of the 32-bit result) */
++DEF_HELPER_FLAGS_2(addw_fw, TCG_CALL_NO_RWG_SE, i32, i32, i32)
++DEF_HELPER_FLAGS_2(subw_fw, TCG_CALL_NO_RWG_SE, i32, i32, i32)
+diff --git a/target/e2k/helper_aau.c b/target/e2k/helper_aau.c
+index 969e02b..63e8c78 100644
+--- a/target/e2k/helper_aau.c
++++ b/target/e2k/helper_aau.c
+@@ -12,7 +12,7 @@
+ #include "exec/helper-proto.h"
+ 
+ static inline void init_prefetch_area(E2KAauAreaState *s, E2KAauPrefInstr pi,
+-    uint32_t *inds)
++    int64_t *inds)
+ {
+     s->last_page = 0;
+     s->last_page_valid = false;
+@@ -86,7 +86,7 @@ void HELPER(aau_am)(CPUE2KState *env, int chan, int area)
+     E2KAauPrefState *ps = chan < 2 ? &env->aau.pl : &env->aau.pr;
+     E2KAauAreaState *as = &ps->area[area];
+     E2KAauPrefInstr instr = as->pi;
+-    uint32_t incr = env->aau.incrs[instr.incr];
++    int64_t incr = env->aau.incrs[instr.incr];
+     int size;
+ 
+     if (instr.fmt == 0) {
+@@ -109,14 +109,34 @@ void HELPER(aaurwd_aad)(CPUE2KState *env, uint32_t aad, uint64_t val, uint32_t t
+     env->aau.ds[aad].rw = 3;
+ }
+ 
++/* sim: aaurws to an AAD writes a zero-extended 32-bit base; glibc memcpy and ld.so keep the full
++ * address in a 48-bit %aaind (32-bit index registers made the APB path read the low 4 GB instead) */
++void HELPER(aaurws_aad)(CPUE2KState *env, uint32_t aad, uint64_t val, uint32_t tag)
++{
++    /* a 32-bit AAD write makes a SAP descriptor: address = sap_base + ind + (stack top & ~0xffffffff)
++     * (linux-e2k arch/e2k/kernel/cpu/iset_v5.c, do_aau_fault) */
++    /* (not SAP: ld.so/glibc write a 32-bit base, usually 0, and keep the full address in an aaind) */
++    if (getenv("SIM_AAD_SAP")) helper_aaurwd_aad(env, aad, (env->sbr & ~0xffffffffull) + (val & 0xffffffffull), tag);
++    else helper_aaurwd_aad(env, aad, val & 0xffffffffull, tag);
++}
++
++/* sim: an AAD write from ALC5 goes to the high descriptor word (sizes), not to the base
++ * (glibc memcpy: aaurwd,2 %dr5,%aad0 then aaurws,5 %g18,%aad0) */
++void HELPER(aaurw_aad_hi)(CPUE2KState *env, uint32_t aad, uint64_t val, uint32_t is32)
++{
++    if (is32) env->aau.ds[aad].hi = (env->aau.ds[aad].hi & 0xffffffffull) | (val << 32);
++    else env->aau.ds[aad].hi = val;
++}
++
+ void HELPER(aaurwq_aad)(CPUE2KState *env, uint32_t aad, Int128 val, uint32_t tag)
+ {
+     helper_aaurwd_aad(env, aad, int128_getlo(val), tag);
+     env->aau.ds[aad].hi = int128_gethi(val) & 0xffffffff00000000;
+ }
+ 
+-void HELPER(aaurwd_aaind)(CPUE2KState *env, uint32_t index, uint32_t val, uint32_t tag)
++void HELPER(aaurwd_aaind)(CPUE2KState *env, uint32_t index, uint64_t val, uint32_t tag)
+ {
++    val = sextract64(val, 0, 48);
+     env->aau.inds[index] = val;
+ 
+     if (env->enable_tags) {
+@@ -124,8 +144,9 @@ void HELPER(aaurwd_aaind)(CPUE2KState *env, uint32_t index, uint32_t val, uint32
+     }
+ }
+ 
+-void HELPER(aaurwd_aasti)(CPUE2KState *env, uint32_t index, uint32_t val, uint32_t tag)
++void HELPER(aaurwd_aasti)(CPUE2KState *env, uint32_t index, uint64_t val, uint32_t tag)
+ {
++    val = sextract64(val, 0, 48);
+     env->aau.stis[index] = val;
+ 
+     if (env->enable_tags) {
+@@ -133,8 +154,9 @@ void HELPER(aaurwd_aasti)(CPUE2KState *env, uint32_t index, uint32_t val, uint32
+     }
+ }
+ 
+-void HELPER(aaurwd_aaincr)(CPUE2KState *env, uint32_t index, uint32_t val, uint32_t tag)
++void HELPER(aaurwd_aaincr)(CPUE2KState *env, uint32_t index, uint64_t val, uint32_t tag)
+ {
++    val = sextract64(val, 0, 48);
+     env->aau.incrs[index] = val;
+ 
+     if (env->enable_tags) {
+diff --git a/target/e2k/helper_int.c b/target/e2k/helper_int.c
+index ff474a0..f2a8903 100644
+--- a/target/e2k/helper_int.c
++++ b/target/e2k/helper_int.c
+@@ -436,3 +436,25 @@ uint64_t HELPER(clmulh)(uint64_t s1, uint64_t s2)
+ 
+     return r;
+ }
++
++/* sim: adds_fw/subs_fw write an x86 EFLAGS image (checked on Elbrus-8SV: 5+7 -> 0x4, 0x7fffffff+1 -> 0x894, 0xffffffff+1 -> 0x55) */
++static uint32_t sim_x86_flags(uint32_t a, uint32_t b, uint32_t r, uint32_t cf, uint32_t of)
++{
++    uint32_t f = cf ? 1 : 0;
++    f |= (__builtin_popcount(r & 0xff) & 1) ? 0 : 0x4;
++    f |= (a ^ b ^ r) & 0x10;
++    f |= r == 0 ? 0x40 : 0;
++    f |= (r >> 31) ? 0x80 : 0;
++    f |= of ? 0x800 : 0;
++    return f;
++}
++uint32_t HELPER(addw_fw)(uint32_t a, uint32_t b)
++{
++    uint32_t r = a + b;
++    return sim_x86_flags(a, b, r, r < a, ((a ^ r) & (b ^ r)) >> 31);
++}
++uint32_t HELPER(subw_fw)(uint32_t a, uint32_t b)
++{
++    uint32_t r = a - b;
++    return sim_x86_flags(a, b, r, a < b, ((a ^ b) & (a ^ r)) >> 31);
++}
+diff --git a/target/e2k/trans/alop-v1.c.inc b/target/e2k/trans/alop-v1.c.inc
+index e86268d..62387ad 100644
+--- a/target/e2k/trans/alop-v1.c.inc
++++ b/target/e2k/trans/alop-v1.c.inc
+@@ -146,6 +146,8 @@ TRANSD(mergew,          1, 1, 1, 1, 1, 1, S,S,S,0, alf1,    gen_merges);
+ TRANSD(merged,          1, 1, 1, 1, 1, 1, D,D,D,0, alf1,    gen_merged);
+ TRANSW(addw,            1, 1, 1, 1, 1, 1, S,S,S,0, alf1, _, tcg_gen_add_i32);
+ TRANSW(addd,            1, 1, 1, 1, 1, 1, D,D,D,0, alf1, _, tcg_gen_add_i64);
++TRANSW(addw_fw,         1, 0, 0, 1, 0, 0, S,S,S,0, alf1, _, gen_helper_addw_fw);
++TRANSW(subw_fw,         1, 0, 0, 1, 0, 0, S,S,S,0, alf1, _, gen_helper_subw_fw);
+ TRANSW(negw,            1, 1, 1, 1, 1, 1, S,S,S,0, alf2, _, tcg_gen_neg_i32);
+ TRANSW(subw,            1, 1, 1, 1, 1, 1, S,S,S,0, alf1, _, tcg_gen_sub_i32);
+ TRANSW(negd,            1, 1, 1, 1, 1, 1, D,D,D,0, alf2, _, tcg_gen_neg_i64);
+diff --git a/target/e2k/translate.c b/target/e2k/translate.c
+index 1ba194c..9bcae06 100644
+--- a/target/e2k/translate.c
++++ b/target/e2k/translate.c
+@@ -4215,13 +4215,13 @@ static void gen_aaurwq_aad(Alop *alop, TCGv_i128 arg1, TCGv_i32 tag)
+     gen_helper_aaurwq_aad(tcg_env, tcg_constant_i32(alop->als.aad), arg1, tag);
+ }
+ 
+-static void gen_aaurwd_aasti(Alop *alop, TCGv_i32 val, TCGv_i32 tag)
++static void gen_aaurwd_aasti(Alop *alop, TCGv_i64 val, TCGv_i32 tag)
+ {
+     TCGv_i32 aasti = tcg_constant_i32(alop->als.aaind);
+     gen_helper_aaurwd_aasti(tcg_env, aasti, val, tag);
+ }
+ 
+-static void gen_aaurwd_aaind(Alop *alop, TCGv_i32 val, TCGv_i32 tag)
++static void gen_aaurwd_aaind(Alop *alop, TCGv_i64 val, TCGv_i32 tag)
+ {
+     int index = alop->als.aaind;
+     if (index) {
+@@ -4230,7 +4230,7 @@ static void gen_aaurwd_aaind(Alop *alop, TCGv_i32 val, TCGv_i32 tag)
+     }
+ }
+ 
+-static void gen_aaurwd_aaincr(Alop *alop, TCGv_i32 val, TCGv_i32 tag)
++static void gen_aaurwd_aaincr(Alop *alop, TCGv_i64 val, TCGv_i32 tag)
+ {
+     int index = alop->als.aaind & 7;
+     if (index) {
+@@ -4239,7 +4239,14 @@ static void gen_aaurwd_aaincr(Alop *alop, TCGv_i32 val, TCGv_i32 tag)
+     }
+ }
+ 
+-static void gen_aaurw_rest_i32(Alop *alop, TCGv_i32 arg1, TCGv_i32 tag)
++static void gen_aaurw_rest_i64(Alop *alop, TCGv_i64 arg1, TCGv_i32 tag);
++static void gen_aaurw_rest_i32(Alop *alop, TCGv_i32 a32, TCGv_i32 tag)
++{
++    TCGv_i64 t = tcg_temp_new_i64();
++    tcg_gen_ext_i32_i64(t, a32);
++    gen_aaurw_rest_i64(alop, t, tag);
++}
++static void gen_aaurw_rest_i64(Alop *alop, TCGv_i64 arg1, TCGv_i32 tag)
+ {
+     switch(alop->als.aaopc) {
+     case 1: /* aaurwd src4, aasti */
+@@ -4479,12 +4486,12 @@ static void gen_staad(Alop *alop)
+ 
+     if (mas == 0x3f) {
+         /* aaurwd */
+-        if (alop->als.aaopc == 0) {
++        if (alop->als.aaopc == 0 && alop->chan == 5 && getenv("SIM_AAD5")) {
++            gen_helper_aaurw_aad_hi(tcg_env, tcg_constant_i32(alop->als.aad), s4.val, tcg_constant_i32(0));
++        } else if (alop->als.aaopc == 0) {
+             gen_aaurwd_aad(alop, s4.val, s4.tag);
+         } else {
+-            TCGv_i32 t0 = tcg_temp_new_i32();
+-            tcg_gen_extrl_i64_i32(t0, s4.val);
+-            gen_aaurw_rest_i32(alop, t0, s4.tag);
++            gen_aaurw_rest_i64(alop, s4.val, s4.tag);
+         }
+     } else {
+         /* staad */
+@@ -4535,7 +4542,10 @@ static void gen_staaw_(Alop *alop, MemOp memop)
+                 TCGv_i64 t0 = tcg_temp_new_i64();
+ 
+                 tcg_gen_extu_i32_i64(t0, s4.val);
+-                gen_aaurwd_aad(alop, t0, s4.tag);
++                if (alop->chan == 5 && getenv("SIM_AAD5"))
++                    gen_helper_aaurw_aad_hi(tcg_env, tcg_constant_i32(alop->als.aad), t0, tcg_constant_i32(1));
++                else
++                    gen_helper_aaurws_aad(tcg_env, tcg_constant_i32(alop->als.aad), t0, s4.tag);
+             } else {
+                 gen_aaurw_rest_i32(alop, s4.val, s4.tag);
+             }

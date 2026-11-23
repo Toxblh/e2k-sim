@@ -1,0 +1,22 @@
+# build outputs
+*.so
+*.o
+__pycache__/
+*.pyc
+stands/fetch/bin/
+stands/cal/code.c
+stands/cal/stand
+stands/cal/code
+stands/probe/*
+!stands/probe/*.c
+examples/bench/bench
+# traces and model outputs
+run/
+*.bin
+*.bin.zst
+*.dec.pkl
+*.sim.pkl
+*.sim.log
+*.dec.log
+perf.data*
+.DS_Store
