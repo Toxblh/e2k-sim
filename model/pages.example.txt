@@ -1,0 +1,10 @@
+# Pages file for sim.py / sim3.py --pages: data address ranges on 2 MB pages (transparent huge pages).
+# One range per line:  LO HI [FRACTION]     (hex or decimal; '#' starts a comment)
+#   [LO, HI) is on 2 MB pages; with FRACTION < 1 (sim3.py only) just that share of its 2 MB chunks is, picked by a
+#   fixed hash of the chunk number.  Addresses outside every range are on 4 KB pages.
+# Read the fractions from /proc/PID/smaps of the program running on the hardware (AnonHugePages / Rss of the
+# mapping, sampled mid-run).  This example: a large JS engine heap reserved at 0x100000000000, 70 % THP; the brk heap
+# (addresses as seen under qemu with ASLR off) 32 %; a second reserved region 63 %.
+0x100000000000 0x101000000000 0.70
+0x00e30000     0x10c10000     0.32
+0x180000000000 0x181000000000 0.63
