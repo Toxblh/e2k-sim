@@ -1,0 +1,13 @@
+# Code+data stands: extra cycles per taken transfer, HW (hw2.txt, 2 rounds) vs the model; per model: total, e2-like (dep L2 L3 DRAM
+# stld dtlb), front end (ctprep ibranch icache itarget itlb).  HW: total, ticks_e2, ib_no_command, l2_query, l2_hit per transfer.
+# sim = sim.py; sim3 = sim3.py SIM_ISUB=4 SIM_NEXTN=2 SIM_INFL=1 SIM_SEQT=4:16; sim3+L2XC = the same + SIM_L2XC=24.
+stand                    |    HW    e2 nocmd   l2q l2hit | sim               | sim3              | sim3+L2XC              
+c_N1024_R1024K_D0        |  35.1   0.0  34.9  22.0   5.4 |  26.1   0.0  26.1 |  34.0   0.0  34.0 |  34.0   0.0  34.0
+c_N1024_R1024K_D256K     |  36.9   5.9  30.5  23.8   5.2 |  30.2   0.9  29.2 |  37.2   2.3  34.9 |  37.2   2.3  34.9
+c_N1024_R1024K_D4M       |  46.5  25.6  25.7  23.4   4.3 |  38.8   9.7  29.1 |  42.2   7.4  34.8 |  42.2   7.4  34.8
+c_N1024_R256Kseq_D0      |   6.6   0.0   6.6   8.1   6.7 |   1.0   0.0   1.0 |   0.0   0.0   0.0 |   0.0   0.0   0.0
+c_N1024_R256Kseq_D256K   |  16.9  15.4   0.4   9.0   7.1 |   4.0   3.0   1.0 |   4.2   4.2   0.1 |  20.0  20.0   0.0
+c_N1024_R256Kseq_D4M     |  32.8  29.1   0.2   8.6   7.2 |  30.0  28.9   1.1 |  30.0  30.0   0.0 |  30.0  30.0   0.0
+c_N64_R16K_D0            |   0.1   0.0   0.1   0.0   0.0 |   0.0   0.0   0.0 |   0.0   0.0   0.0 |   0.0   0.0   0.0
+c_N64_R16K_D256K         |   6.6   4.3   0.0   1.0   0.9 |   3.8   3.8   0.0 |   3.8   3.8   0.0 |   3.8   3.8   0.0
+c_N64_R16K_D4M           |  31.4  30.2   0.1   1.0   0.1 |  28.8  28.8   0.0 |  28.8  28.8   0.0 |  28.8  28.8   0.0

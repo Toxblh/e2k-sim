@@ -1,0 +1,8 @@
+stld16k stld 16384 200000 0
+ldonly16k ldonly 16384 200000
+stld16kD stld 16384 100000 2000
+stld4k stld 4096 800000 0
+ldonly4k ldonly 4096 800000
+stld48k stld 49152 60000 0
+ldonly48k ldonly 49152 60000
+stld16kD20 stld 16384 200000 20

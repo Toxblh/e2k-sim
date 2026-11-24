@@ -1,0 +1,16 @@
+w4b0 cycles:u=390440 instructions:u=104127 bub_b:u=<not counted> bub_b_hwcmd:u=<not counted> 
+w4b0 cycles:u=299517 bub_b_nop:u=13581 bub_b_rf_spillfill:u=0 bub_b_ip_nrdy:u=<not counted> 
+w4b1 cycles:u=388578 instructions:u=104125 bub_b:u=<not counted> bub_b_hwcmd:u=<not counted> 
+w4b1 cycles:u=363008 bub_b_nop:u=13583 bub_b_rf_spillfill:u=<not counted> bub_b_ip_nrdy:u=<not counted> 
+w8b0 cycles:u=303549163 instructions:u=219295885 bub_b:u=67469106 bub_b_hwcmd:u=0 
+w8b0 cycles:u=303450576 bub_b_nop:u=66532056 bub_b_rf_spillfill:u=0 bub_b_ip_nrdy:u=0 
+w8b1 cycles:u=320194673 instructions:u=235673245 bub_b:u=67261805 bub_b_hwcmd:u=0 
+w8b1 cycles:u=319479786 bub_b_nop:u=66513287 bub_b_rf_spillfill:u=0 bub_b_ip_nrdy:u=0 
+w16b0 cycles:u=305013919 instructions:u=219086549 bub_b:u=67058737 bub_b_hwcmd:u=0 
+w16b0 cycles:u=304378551 bub_b_nop:u=66483293 bub_b_rf_spillfill:u=202 bub_b_ip_nrdy:u=0 
+w16b1 cycles:u=321727595 instructions:u=235849959 bub_b:u=66842270 bub_b_hwcmd:u=0 
+w16b1 cycles:u=321616677 bub_b_nop:u=66536861 bub_b_rf_spillfill:u=614 bub_b_ip_nrdy:u=0 
+w26b0 cycles:u=304692199 instructions:u=219554147 bub_b:u=67152156 bub_b_hwcmd:u=64 
+w26b0 cycles:u=303560813 bub_b_nop:u=66530690 bub_b_rf_spillfill:u=76 bub_b_ip_nrdy:u=0 
+w26b1 cycles:u=319817555 instructions:u=235996399 bub_b:u=67356533 bub_b_hwcmd:u=80 
+w26b1 cycles:u=319609641 bub_b_nop:u=66518605 bub_b_rf_spillfill:u=72 bub_b_ip_nrdy:u=0 

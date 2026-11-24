@@ -1,0 +1,4 @@
+own cycles:u=200532475 instructions:u=179463460 dtlb_tlu_query:u=1197 dtlb_query:u=40466985 
+own cycles:u=200435455 dtlb_hit:u=40082998 ticks_e2:u=223786 l1_query:u=40083003 
+ownuse cycles:u=199770452 instructions:u=179512463 dtlb_tlu_query:u=1182 dtlb_query:u=40432686 
+ownuse cycles:u=200424527 dtlb_hit:u=40083010 ticks_e2:u=208451 l1_query:u=40083018 

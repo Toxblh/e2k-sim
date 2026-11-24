@@ -1,0 +1,15 @@
+../cal/stand chase 262144 20000000 | cycles:u=262427686 l1_request:u=20056194 l1_line:u=39946509 mau_reads:u=1694374 
+../cal/stand chase 16384 20000000 | cycles:u=58820873 l1_request:u=19987523 l1_line:u=10663 mau_reads:u=573 
+./dstand stld 4096 800000 0 | cycles:u=3099395114 l1_request:u=819007008 l1_line:u=29458 mau_reads:u=3480 
+env NOFILL=1 ../cal/stand tlb 2048 4096 10000000 0 | cycles:u=318799871 l1_request:u=10365353 l1_line:u=20014704 mau_reads:u=253782 
+env NOFILL=1 ../cal/stand tlb 300 2097152 10000000 1 | cycles:u=331058620 l1_request:u=10377240 l1_line:u=14734057 mau_reads:u=7281370 
+../cal/stand chase 262144 20000000 | cycles:u=259207328 l2_line:u=1703018 mau_ldb_hit:u=0 l1_int_hit:u=3074 
+../cal/stand chase 16384 20000000 | cycles:u=59808632 l2_line:u=16522 mau_ldb_hit:u=15 l1_int_hit:u=20756489 
+./dstand stld 4096 800000 0 | cycles:u=3100975231 l2_line:u=23583 mau_ldb_hit:u=1409 l1_int_hit:u=819383838 
+env NOFILL=1 ../cal/stand tlb 2048 4096 10000000 0 | cycles:u=317656085 l2_line:u=341208 mau_ldb_hit:u=0 l1_int_hit:u=3211 
+env NOFILL=1 ../cal/stand tlb 300 2097152 10000000 1 | cycles:u=329587175 l2_line:u=7446714 mau_ldb_hit:u=40 l1_int_hit:u=2647568 
+../cal/stand chase 262144 20000000 | cycles:u=223889104 dtlb_3_hit:u=0 dtlb_mptdw_miss:u=0 dtlb_tlu_query:u=436 
+../cal/stand chase 16384 20000000 | cycles:u=60119732 dtlb_3_hit:u=0 dtlb_mptdw_miss:u=0 dtlb_tlu_query:u=25 
+./dstand stld 4096 800000 0 | cycles:u=3100167770 dtlb_3_hit:u=0 dtlb_mptdw_miss:u=0 dtlb_tlu_query:u=0 
+env NOFILL=1 ../cal/stand tlb 2048 4096 10000000 0 | cycles:u=317665849 dtlb_3_hit:u=0 dtlb_mptdw_miss:u=0 dtlb_tlu_query:u=10092104 
+env NOFILL=1 ../cal/stand tlb 300 2097152 10000000 1 | cycles:u=335265855 dtlb_3_hit:u=0 dtlb_mptdw_miss:u=0 dtlb_tlu_query:u=5983319 

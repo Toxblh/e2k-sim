@@ -1,0 +1,16 @@
+stld16k G1 cycles:u=3080767443 instructions:u=2258508674 l1_query:u=819284502 l1_ld_hit:u=409632912 
+stld16k G2 cycles:u=3080912106 l2_query:u=409703019 l2_hit:u=409649599 ticks_e2:u=1817521 
+ldonly16k G1 cycles:u=301520 instructions:u=110341 l1_query:u=84436 l1_ld_hit:u=65411 
+ldonly16k G2 cycles:u=298325 l2_query:u=37977 l2_hit:u=22160 ticks_e2:u=111714 
+stld16kD G1 cycles:u=1942219905 instructions:u=1529708743 l1_query:u=409684548 l1_ld_hit:u=204840957 
+stld16kD G2 cycles:u=1941763220 l2_query:u=204880856 l2_hit:u=204848047 ticks_e2:u=1208249 
+stld4k G1 cycles:u=3099943951 instructions:u=2275308294 l1_query:u=819283775 l1_ld_hit:u=409657522 
+stld4k G2 cycles:u=3100049441 l2_query:u=409677897 l2_hit:u=409653765 ticks_e2:u=585752 
+ldonly4k G1 cycles:u=2885438765 instructions:u=2064108206 l1_query:u=409683792 l1_ld_hit:u=409662128 
+ldonly4k G2 cycles:u=2885866129 l2_query:u=73559 l2_hit:u=51667 ticks_e2:u=805964 
+stld48k G1 cycles:u=2771380183 instructions:u=2029309682 l1_query:u=737366622 l1_ld_hit:u=368571601 
+stld48k G2 cycles:u=2773576316 l2_query:u=368890665 l2_hit:u=368788846 ticks_e2:u=6157734 
+ldonly48k G1 cycles:u=338498 instructions:u=111347 l1_query:u=86595 l1_ld_hit:u=65434 
+ldonly48k G2 cycles:u=328092 l2_query:u=39982 l2_hit:u=24405 ticks_e2:u=139089 
+stld16kD20 G1 cycles:u=3091787179 instructions:u=2267308692 l1_query:u=819284616 l1_ld_hit:u=409614577 
+stld16kD20 G2 cycles:u=3090826076 l2_query:u=409710615 l2_hit:u=409648476 ticks_e2:u=1924223 

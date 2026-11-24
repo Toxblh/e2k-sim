@@ -1,0 +1,8 @@
+chase 1048576 4000000 cycles:u=131742923 instructions:u=12316145 l2_hit:u=231087 l2_query:u=4406286  | zero cycles:u=814062 
+chase 2097152 4000000 cycles:u=136344894 instructions:u=12520926 l2_hit:u=267001 l2_query:u=4728906  | zero cycles:u=1233960 
+chase 4194304 4000000 cycles:u=193943555 instructions:u=12930528 l2_hit:u=1565998 l2_query:u=6252085  | zero cycles:u=2442485 
+chase 6291456 4000000 cycles:u=308836087 instructions:u=13340125 l2_hit:u=2835501 l2_query:u=7729713  | zero cycles:u=4312667 
+chase 8388608 4000000 cycles:u=661373281 instructions:u=13749725 l2_hit:u=3609578 l2_query:u=8778868  | zero cycles:u=6198816 
+chase 12582912 4000000 cycles:u=803439461 instructions:u=14568941 l2_hit:u=4615654 l2_query:u=10382534  | zero cycles:u=10267689 
+chase 16777216 4000000 cycles:u=823345080 instructions:u=15388166 l2_hit:u=5401722 l2_query:u=11760211  | zero cycles:u=14598521 
+chase 33554432 4000000 cycles:u=864640109 instructions:u=18664945 l2_hit:u=7714640 l2_query:u=16779646  | zero cycles:u=33560932 

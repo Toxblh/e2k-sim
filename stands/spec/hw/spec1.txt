@@ -1,0 +1,12 @@
+valid cycles:u=200497125 instructions:u=179625978 dtlb_tlu_query:u=1705 dtlb_query:u=40481244 
+valid cycles:u=200329877 dtlb_hit:u=40082997 ticks_e2:u=137235 l1_query:u=83125 
+null cycles:u=199754552 instructions:u=179493403 dtlb_tlu_query:u=1785 dtlb_query:u=40450845 
+null cycles:u=200368405 dtlb_hit:u=40083058 ticks_e2:u=158379 l1_query:u=83189 
+nulluse cycles:u=359593522 instructions:u=179809753 dtlb_tlu_query:u=2265 dtlb_query:u=40196898 
+nulluse cycles:u=360350661 dtlb_hit:u=40083085 ticks_e2:u=140149269 l1_query:u=83315 
+unmap cycles:u=201485858 instructions:u=180119229 dtlb_tlu_query:u=1563 dtlb_query:u=40333911 
+unmap cycles:u=200331453 dtlb_hit:u=40082915 ticks_e2:u=136995 l1_query:u=83043 
+unmapuse cycles:u=359480448 instructions:u=179776812 dtlb_tlu_query:u=1813 dtlb_query:u=40197135 
+unmapuse cycles:u=360398113 dtlb_hit:u=40082849 ticks_e2:u=140187425 l1_query:u=83073 
+kern cycles:u=199468853 instructions:u=179465983 dtlb_tlu_query:u=1208 dtlb_query:u=40397095 
+kern cycles:u=200347104 dtlb_hit:u=40082998 ticks_e2:u=147960 l1_query:u=83012 

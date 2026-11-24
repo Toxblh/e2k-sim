@@ -1,0 +1,12 @@
+own cycles:u=199497848 instructions:u=179530382 dtlb_tlu_query:u=1296 dtlb_query:u=40369649 
+own cycles:u=200411063 dtlb_hit:u=40082999 ticks_e2:u=202536 l1_query:u=40083008 
+ownuse cycles:u=199735859 instructions:u=179725274 dtlb_tlu_query:u=1200 dtlb_query:u=40427082 
+ownuse cycles:u=200328159 dtlb_hit:u=40082999 ticks_e2:u=129654 l1_query:u=40083004 
+sunmap cycles:u=919444363 instructions:u=180107155 dtlb_tlu_query:u=79925609 dtlb_query:u=120343899 
+sunmap cycles:u=920402846 dtlb_hit:u=83023 ticks_e2:u=720190812 l1_query:u=20083035 
+sunmapuse cycles:u=1079620121 instructions:u=180022658 dtlb_tlu_query:u=79956325 dtlb_query:u=120203698 
+sunmapuse cycles:u=1080344731 dtlb_hit:u=83027 ticks_e2:u=840134478 l1_query:u=20083019 
+hunmap cycles:u=920133941 instructions:u=180155642 dtlb_tlu_query:u=79947342 dtlb_query:u=120244787 
+hunmap cycles:u=920351912 dtlb_hit:u=83015 ticks_e2:u=720135663 l1_query:u=20082986 
+hunmapuse cycles:u=1079354130 instructions:u=180004926 dtlb_tlu_query:u=79958438 dtlb_query:u=120193376 
+hunmapuse cycles:u=1080375732 dtlb_hit:u=83007 ticks_e2:u=840164516 l1_query:u=20082986 

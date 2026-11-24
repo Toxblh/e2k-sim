@@ -1,0 +1,14 @@
+mix_P600_Q0 G1 cycles:u=221190686 instructions:u=30113671 l1_query:u=20103791 l1_ld_hit:u=66025 
+mix_P600_Q0 G2 cycles:u=224828660 dtlb_query:u=19868913 dtlb_hit:u=19949933 dtlb_tlu_query:u=2893 
+mix_P0_Q64 G1 cycles:u=60442766 instructions:u=30109964 l1_query:u=20085085 l1_ld_hit:u=20065166 
+mix_P0_Q64 G2 cycles:u=60206282 dtlb_query:u=20976997 dtlb_hit:u=20401229 dtlb_tlu_query:u=223 
+mix_P600_Q64 G1 cycles:u=449460125 instructions:u=30114928 l1_query:u=20110388 l1_ld_hit:u=66244 
+mix_P600_Q64 G2 cycles:u=455075138 dtlb_query:u=20142701 dtlb_hit:u=20111235 dtlb_tlu_query:u=3198 
+mix_P300_Q64 G1 cycles:u=455874383 instructions:u=30112230 l1_query:u=20097267 l1_ld_hit:u=65725 
+mix_P300_Q64 G2 cycles:u=452951292 dtlb_query:u=20197292 dtlb_hit:u=20124886 dtlb_tlu_query:u=3093 
+mix_P600_Q16 G1 cycles:u=60658128 instructions:u=30114904 l1_query:u=20106585 l1_ld_hit:u=20064574 
+mix_P600_Q16 G2 cycles:u=62960862 dtlb_query:u=18141818 dtlb_hit:u=18985792 dtlb_tlu_query:u=2690 
+mix_P700_Q0 G1 cycles:u=222365765 instructions:u=30114372 l1_query:u=20107706 l1_ld_hit:u=66048 
+mix_P700_Q0 G2 cycles:u=227056454 dtlb_query:u=19661048 dtlb_hit:u=19901189 dtlb_tlu_query:u=121289 
+mix_P800_Q0 G1 cycles:u=259519261 instructions:u=30115073 l1_query:u=21813453 l1_ld_hit:u=65838 
+mix_P800_Q0 G2 cycles:u=259823436 dtlb_query:u=21763166 dtlb_hit:u=19934111 dtlb_tlu_query:u=1749142 

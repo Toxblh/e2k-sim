@@ -1,0 +1,16 @@
+chst256_K0 G1 cycles:u=68701877 instructions:u=35237306 l1_query:u=5166802 l1_ld_hit:u=101303 
+chst256_K0 G2 cycles:u=84268946 l2_query:u=5091332 l2_hit:u=4260656 ticks_e2:u=33795685 
+chst256_K1 G1 cycles:u=124868091 instructions:u=60237308 l1_query:u=10166686 l1_ld_hit:u=101404 
+chst256_K1 G2 cycles:u=124339985 l2_query:u=10091520 l2_hit:u=8649061 ticks_e2:u=22450871 
+chst256_K2 G1 cycles:u=156822974 instructions:u=130237304 l1_query:u=15166846 l1_ld_hit:u=101108 
+chst256_K2 G2 cycles:u=156205173 l2_query:u=15092681 l2_hit:u=13616085 ticks_e2:u=9626284 
+chst256_K4 G1 cycles:u=167249240 instructions:u=145237306 l1_query:u=25166774 l1_ld_hit:u=101487 
+chst256_K4 G2 cycles:u=167883121 l2_query:u=25092396 l2_hit:u=24064357 ticks_e2:u=6890264 
+chst16_K0 G1 cycles:u=55454518 instructions:u=35120247 l1_query:u=5090940 l1_ld_hit:u=5067104 
+chst16_K0 G2 cycles:u=55846369 l2_query:u=48436 l2_hit:u=28522 ticks_e2:u=612826 
+chst16_K4 G1 cycles:u=161093448 instructions:u=145120247 l1_query:u=25090947 l1_ld_hit:u=5063998 
+chst16_K4 G2 cycles:u=160910716 l2_query:u=20051482 l2_hit:u=20029016 ticks_e2:u=666797 
+chst4m_K0 G1 cycles:u=163779556 instructions:u=23111361 l1_query:u=4348092 l1_ld_hit:u=565223 
+chst4m_K0 G2 cycles:u=206229793 l2_query:u=4045808 l2_hit:u=683817 ticks_e2:u=171953151 
+chst4m_K4 G1 cycles:u=182465705 instructions:u=89111361 l1_query:u=16348099 l1_ld_hit:u=566733 
+chst4m_K4 G2 cycles:u=236414406 l2_query:u=16042809 l2_hit:u=12681633 ticks_e2:u=134224299 

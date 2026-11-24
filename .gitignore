@@ -20,3 +20,7 @@ run/
 *.dec.log
 perf.data*
 .DS_Store
+stands/dispatch/bin/
+stands/l2code/bin/
+stands/spec/bin/
+stands/data/dstand
