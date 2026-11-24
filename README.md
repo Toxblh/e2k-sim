@@ -23,10 +23,10 @@ Accuracy: 138 instruction-supply stands median |error| 1.5 %, 90th percentile 23
 |---|---|
 | `qemu/` | patch for OpenE2K qemu-e2k (pinned commit) + build instructions ([qemu/README.md](qemu/README.md)) |
 | `plugin/` | `etrace.c`, the trace plugin (windows of wide instructions + memory accesses); `regs.c` (debug); `Makefile` |
-| `model/` | `e2kdis.py` objdump-listing parser and latency classes, `decode.py`, `sim.py` (the model), summaries `apps.py` `report.py` `supply.py` `hwcmp.py` `perfcmp.py`, layout estimates `mklayout.py` `mkfam.py` `mkcolour.py` `laygain.py`, `tdump.py` (trace dump) |
+| `model/` | `e2kdis.py` objdump-listing parser and latency classes, `decode.py`, `sim.py` (the model), `sim3.py` (sim.py + large-program settings), `topdown.py` (model in the HW top-down terms), summaries `apps.py` `report.py` `supply.py` `hwcmp.py` `perfcmp.py`, layout estimates `mklayout.py` `mkfam.py` `mkcolour.py` `laygain.py`, `tdump.py` (trace dump) |
 | `scripts/` | `qtrace.sh` (trace), `model.sh` (decode + model all windows), `simset.sh` (model variants / layouts), `mksyms.sh` (symbol tables), `hwstat.sh` (perf stat on the Elbrus) |
-| `stands/` | fetch / ITLB / L2 stand generators, calibration stands, probes, their hardware results ([stands/README.md](stands/README.md)) |
-| `docs/` | [FACTS.md](docs/FACTS.md) (the measured facts), [FETCH.md](docs/FETCH.md), [EVENTS.md](docs/EVENTS.md) (PMU events), [ACCURACY.md](docs/ACCURACY.md) |
+| `stands/` | fetch / ITLB / L2 / dispatch / code+data / speculative-load / data stand generators, calibration stands, probes, their hardware results ([stands/README.md](stands/README.md)) |
+| `docs/` | [FACTS.md](docs/FACTS.md) (the measured facts), [FETCH.md](docs/FETCH.md), [EVENTS.md](docs/EVENTS.md) (PMU events), [IDENTITY.md](docs/IDENTITY.md) (cycles = instructions + bub_b + ticks_e2 + ib_no_command), [ACCURACY.md](docs/ACCURACY.md) |
 | `examples/bench/` | an end-to-end run on an open C program, with the committed summaries |
 
 ## What you need
@@ -75,6 +75,19 @@ NM="$E2K_QEMU -L $E2K_ROOT $E2K_ROOT/usr/bin/nm" scripts/mksyms.sh run/syms ./pr
 ```sh
 JOBS=4 PY=pypy3 scripts/model.sh run/prog 500000      # decode, then every window with a 0.5 M warm-up
 ```
+
+For large programs (hundreds of KB of hot code, big heaps) use sim3.py with its recommended settings and a pages file
+(format and example: `model/pages.example.txt`; take the THP fractions from /proc/PID/smaps on the hardware):
+
+```sh
+SIMPY=sim3.py SIM_ISUB=4 SIM_NEXTN=2 SIM_INFL=1 SIM_SEQT=4:16 SIM_SPEC=12 SIM_L2XC=24 \
+  JOBS=4 PY=pypy3 scripts/model.sh run/prog 4000000 --pages pages.txt
+python3 model/topdown.py run/prog      # instructions + bub_b + ticks_e2 + ib_no_command, as perf measures them
+```
+
+sim3.py without SIM_* settings is sim.py.  sim.py stays the reference for small programs and the stands; on five large
+JavaScript applications sim.py is 15-22 % low and sim3.py -1 .. -11 % (`SIM_L2XC` is fitted there, see
+[docs/ACCURACY.md](docs/ACCURACY.md)).
 
 Model variants and layout estimates run on the same decoded trace into another directory, e.g.
 `scripts/simset.sh run run_w2 "SIM_ITLB=256:1:12 SIM_ITLBX=26 SIM_L2CODE=hashed" prog` (knobs: `model/sim.py` docstring).
@@ -127,6 +140,8 @@ All rows with sources and raw result files: [docs/FACTS.md](docs/FACTS.md).
   [docs/ACCURACY.md](docs/ACCURACY.md): targets at 16 KB+64 / 64 KB+64 strides (an unidentified extra conflict on HW,
   under-predicted up to -68 %), 6 pages in one ITLB set (partial thrash, -69 %), 256 targets 16 KB apart (-71 %), and
   several 64 KB-stride cases where the model's L1I/L2 replacement is harsher than the hardware's (+21 .. +68 %).
+- Five large JavaScript applications: sim.py -15 .. -22 %, sim3.py -1.0 .. -11.1 % (one sim3 term fitted on them;
+  open: tsc DTLB walks); see [docs/ACCURACY.md](docs/ACCURACY.md).
 - `examples/bench`: whole run -1.1 %; per symbol up to ~5 points of the run off (memory-bound hash lookups
   over-predicted, store-heavy code under-predicted).
 

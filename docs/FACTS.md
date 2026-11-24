@@ -37,3 +37,25 @@ Also measured, with stands that are not part of this repository (earlier work on
 | `ct` after `movtd` / `return` | 9 / 6 cycles of preparation (taken) |
 
 Not measured, model estimates: DRAM cost of a code line (sequential 30, taken target 185).
+
+## Large-program effects (sim3)
+
+Found by comparing sim.py with five large JavaScript applications term by term ([IDENTITY.md](IDENTITY.md)) and then
+isolated with stands.  `model/sim3.py` charges them when its settings are on (docstring; recommended:
+`SIM_ISUB=4 SIM_NEXTN=2 SIM_INFL=1 SIM_SEQT=4:16 SIM_SPEC=12 SIM_L2XC=24` and a pages file).
+
+| fact | value | stand (source -> raw result) | sim3 setting |
+|---|---|---|---|
+| speculative load (`ldd,sm`) to an invalid page, the same page each time | free by itself (no L1D access, no walk); an op using its result waits ~8 cycles more | `stands/spec` null/unmap/kern(use) -> `hw/spec1.txt`; valid control own/ownuse -> `hw/spec2.txt` | `SIM_SPEC=12` (result latency; qemu records no access for such a load, so it is the speculative load without a record) |
+| speculative load to a new invalid page each time | walks the page table (2 `dtlb_tlu_query` per load) and costs ~18 cycles per load even unused, +8 when used | sunmap/hunmap(use) -> `hw/spec3.txt` | not modelled (the trace has no address for these loads) |
+| a code line fills L2 as a whole | 8 x 32 B `l2_query` per 256 B L1I line fill, i.e. four 64 B L2 lines | `stands/dispatch` `*_seq` (l2_query = 8.0 per transfer) -> `hw/hw1.txt` | `SIM_ISUB=4` |
+| lines fetched after a taken target that misses L1I | 2-2.7 lines per transfer (l2_query / 8) | `stands/dispatch` `*_rand` -> `hw/hw1.txt` | `SIM_NEXTN=2`, `SIM_INFL=1` (pulled lines are in flight) |
+| taken jump into the next line (not streamed) | +4.3 from L2, +16.7 from L3 per transfer (sequential fetch: +1.0 / +3.9) | `d_N1024_R256K_seq`, `d_N4096_R1024K_seq` -> `hw/hw1.txt` | `SIM_SEQT=4:16` |
+| data L2 hits next to code refills from L2 | 256 KB data chase + 256 KB code streamed from L2: +16.9 cycles per transfer, the data load leaves L2 (l2_hit 7.1 of 9.0 queries); an LRU L2 keeps both (+4.2) | `stands/l2code` `c_N1024_R256Kseq_D256K` -> `hw/hw2.txt` | `SIM_L2XC=24` - **FITTED, not measured**: chosen so that the per-symbol E2 stalls of the large applications match; on this stand it gives +20.0 |
+| transparent huge pages of a large heap | only part of a mapping is on 2 MB pages (e.g. 70 % of a GC heap, 32 % of the brk heap, from /proc/PID/smaps) | measured on the applications | pages file `LO HI FRACTION` (`model/pages.example.txt`) |
+| L1D associativity | 4-way: 4 lines 16 KB apart hit, 5 miss; 8 lines 8 KB apart hit, 12 miss | `stands/data` assoc -> `hw/d1.txt` | (as sim.py) |
+| a store keeps its line in L1D | reloading a just-stored 4-48 KB buffer hits L1D on every load | `stands/data` stld -> `hw/d2.txt` | (as sim.py) |
+| 4 KB and 2 MB DTLB entries | do not interfere: 600 small + 64 huge pages, no walks; 4 KB DTLB holds 768 pages (700: few walks, 800: 0.09 per load) | `stands/data` mix -> `hw/d3.txt` | (as sim.py) |
+| L3 share with other cores busy | chase 1-2 MB 33 cycles, 4 MB 48, 6 MB 76, 8 MB 164, 16 MB+ ~200 (other jobs running on other cores) | `stands/data/run_l3.sh` -> `hw/l3.txt` | (sim.py keeps 16 MB; the model's windows are too short to fill it) |
+| `setwd` / `setbn` | no `bub_b_hwcmd` for windows of 8-26 quads with or without setbn | `stands/identity/setwd_gen.py` -> `hw/setwd.txt` | - |
+| PMU: `l1_request` / `l1_line` | one per L1D access (no replays) / two per L1D load miss (a 64 B L2 line fills two 32 B L1D lines) | `stands/cal` chase -> `stands/data/hw/cal3.txt` | - |

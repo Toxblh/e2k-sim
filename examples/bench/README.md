@@ -2,7 +2,8 @@
 
 `bench.c` (this directory, GPL-2.0-or-later) runs five small kernels: a switch-dispatched bytecode interpreter, a
 string hash map, quicksort, an 8 MB pointer chase and a 64x64 matrix multiply.  `./bench 2` executes 0.314 G wide
-instructions.  The files in `output/` were produced by exactly the commands below.
+instructions.  The files in `output/` were produced by exactly the commands below, with `model/sim.py` (before sim3.py existed; sim3.py targets
+large code, and its fitted `SIM_L2XC` was not re-checked on this small program).
 
 ## 1. Build it for e2k-v5 and measure it (on the Elbrus machine)
 
